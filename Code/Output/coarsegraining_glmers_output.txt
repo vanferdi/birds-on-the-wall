@@ -1,0 +1,2009 @@
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS BH
+[1] ===========================
+[1] BHPA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance   Chisq Chi Df
+macaw_model          6 3054.5 3095.3 -1521.3   3042.5               
+largersmaller_model  6 3082.7 3123.4 -1535.3   3070.7  0.0000      0
+simdifsize_model     6 3080.2 3120.9 -1534.1   3068.2  2.4776      0
+size_model           7 3061.1 3108.7 -1523.6   3047.1 21.0738      1
+back_model           7 3050.7 3098.2 -1518.3   3036.7 10.4524      0
+face_model           8 3087.8 3142.1 -1535.9   3071.8  0.0000      1
+clade_model          9 3063.3 3124.4 -1522.6   3045.3 26.4712      1
+head_model           9 3038.2 3099.3 -1510.1   3020.2 25.0717      0
+species_model       15 3080.7 3182.6 -1525.4   3050.7  0.0000      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model                     1    
+simdifsize_model    < 0.00000000000000022 ***
+size_model                   0.0000044194 ***
+back_model          < 0.00000000000000022 ***
+face_model                              1    
+clade_model                  0.0000002675 ***
+head_model          < 0.00000000000000022 ***
+species_model                           1    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta
+8          head_model     9 -1510.104 3038.208  0.00000
+5          back_model     7 -1518.332 3050.664 12.45688
+1         macaw_model     6 -1521.260 3054.519 16.31149
+4          size_model     7 -1523.558 3061.117 22.90932
+7         clade_model     9 -1522.640 3063.279 25.07169
+3    simdifsize_model     6 -1534.095 3080.191 41.98308
+9       species_model    15 -1525.372 3080.743 42.53575
+2 largersmaller_model     6 -1535.334 3082.668 44.46064
+6          face_model     8 -1535.875 3087.750 49.54293
+               weight
+8 0.99773135808916935
+5 0.00196804711164114
+1 0.00028643003691396
+4 0.00001057589383135
+7 0.00000358728825732
+3 0.00000000076296176
+9 0.00000000057875171
+2 0.00000000022105927
+6 0.00000000001741414
+[1] 
+[1] BHPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3038.2   3099.3  -1510.1   3020.2     6577 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5542 -0.3298 -0.2029 -0.1357 10.9390 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.03433  0.1853  
+ Spot        (Intercept) 0.33210  0.5763  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -3.9529     0.2434 -16.237 < 0.0000000000000002 ***
+head_B        0.3413     0.1252   2.727              0.00638 ** 
+head_G        1.4731     0.1453  10.137 < 0.0000000000000002 ***
+head_R       -0.3020     0.1516  -1.993              0.04631 *  
+head_O        0.1587     0.1956   0.811              0.41716    
+head_K       -0.4372     0.1338  -3.268              0.00108 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) head_B head_G head_R head_O
+head_B -0.048                            
+head_G -0.476 -0.043                     
+head_R -0.041 -0.341  0.030              
+head_O -0.143  0.041  0.104  0.020       
+head_K -0.006 -0.127 -0.130  0.009 -0.035
+[1] 
+[1] BHPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3080.7   3182.6  -1525.4   3050.7     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.9273 -0.2843 -0.2187 -0.1745  7.8529 
+
+Random effects:
+ Groups      Name        Variance            Std.Dev.    
+ Rdate       (Intercept) 0.00000000000001276 0.0000001129
+ Xhr.dectime (Intercept) 0.03359988583873989 0.1833027164
+ Spot        (Intercept) 0.26923356099778117 0.5188772119
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.34715    0.20504 -16.324 < 0.0000000000000002 ***
+BY           0.25863    0.12837   2.015              0.04393 *  
+CF           0.50406    0.12414   4.060           0.00004898 ***
+DH           0.31277    0.27656   1.131              0.25809    
+ME           0.28964    0.12088   2.396              0.01657 *  
+OC          -0.34024    0.13944  -2.440              0.01469 *  
+RB           0.55300    0.12269   4.507           0.00000657 ***
+RG          -0.52049    0.33081  -1.573              0.11563    
+SC          -0.21326    0.15780  -1.351              0.17657    
+WB           0.06346    0.19475   0.326              0.74454    
+WE           0.26717    0.14077   1.898              0.05770 .  
+YC           0.52401    0.17732   2.955              0.00312 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BY     CF     DH     ME     OC     RB     RG     SC     WB    
+BY -0.050                                                               
+CF -0.094 -0.044                                                        
+DH -0.079  0.018  0.024                                                 
+ME -0.153 -0.055 -0.167  0.044                                          
+OC -0.019 -0.119  0.017 -0.078 -0.241                                   
+RB -0.066 -0.056 -0.361  0.011 -0.044 -0.001                            
+RG -0.030 -0.097  0.028  0.006  0.029  0.027  0.063                     
+SC -0.025 -0.302 -0.003 -0.004 -0.038  0.019  0.015 -0.177              
+WB -0.141  0.025  0.039 -0.086  0.071 -0.027  0.055  0.019  0.013       
+WE -0.079  0.017 -0.003 -0.077 -0.014 -0.065 -0.034  0.004  0.008  0.038
+YC -0.045 -0.130 -0.160  0.015  0.169 -0.050 -0.098  0.022  0.009  0.002
+   WE    
+BY       
+CF       
+DH       
+ME       
+OC       
+RB       
+RG       
+SC       
+WB       
+WE       
+YC  0.016
+ [1] 4 3 2 1 4 3 2 2 2 1 1 2
+=======
+[1] CURRENT FOCAL SPECIES IS BY
+[1] ===========================
+[1] BYMA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance    Chisq Chi Df
+macaw_model          6 3371.0 3411.7 -1679.5   3359.0                
+back_model           6 3371.0 3411.7 -1679.5   3359.0   0.0000      0
+largersmaller_model  6 3367.5 3408.3 -1677.8   3355.5   3.4557      0
+simdifsize_model     6 3371.0 3411.7 -1679.5   3359.0   0.0000      0
+size_model           7 3249.3 3296.9 -1617.7   3235.3 123.6329      1
+clade_model          9 3308.8 3370.0 -1645.4   3290.8   0.0000      2
+head_model           9 3295.3 3356.4 -1638.7   3277.3  13.5418      0
+face_model           9 3317.4 3378.6 -1649.7   3299.4   0.0000      0
+species_model       15 3329.2 3431.1 -1649.6   3299.2   0.2415      6
+                             Pr(>Chisq)    
+macaw_model                                
+back_model          <0.0000000000000002 ***
+largersmaller_model <0.0000000000000002 ***
+simdifsize_model                 1.0000    
+size_model          <0.0000000000000002 ***
+clade_model                      1.0000    
+head_model          <0.0000000000000002 ***
+face_model                       1.0000    
+species_model                    0.9997    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC     delta
+5          size_model     7 -1617.673 3249.346   0.00000
+7          head_model     9 -1638.651 3295.302  45.95581
+6         clade_model     9 -1645.422 3308.843  59.49765
+8          face_model     9 -1649.714 3317.428  68.08189
+9       species_model    15 -1649.593 3329.186  79.84039
+3 largersmaller_model     6 -1677.762 3367.523 118.17719
+2          back_model     6 -1679.489 3370.979 121.63292
+1         macaw_model     6 -1679.489 3370.979 121.63292
+4    simdifsize_model     6 -1679.489 3370.979 121.63292
+                               weight
+5 0.999999999894966462576917365367990
+7 0.000000000104911577478399999613482
+6 0.000000000000120295544081249009760
+8 0.000000000000001645147064123243282
+9 0.000000000000000004601288617532063
+3 0.000000000000000000000000021784547
+2 0.000000000000000000000000003870313
+1 0.000000000000000000000000003870313
+4 0.000000000000000000000000003870313
+[1] 
+[1] BYMA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) +  
+    (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3249.3   3296.9  -1617.7   3235.3     6579 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5583 -0.3632 -0.1944 -0.1502 10.0474 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.04146  0.2036  
+ Spot        (Intercept) 0.21016  0.4584  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.50143    0.19621 -17.845 < 0.0000000000000002 ***
+size_S      -0.44385    0.09886  -4.490           0.00000713 ***
+size_M       1.60409    0.12508  12.825 < 0.0000000000000002 ***
+size_L      -0.33264    0.13720  -2.425               0.0153 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) size_S size_M
+size_S -0.142              
+size_M -0.416 -0.093       
+size_L -0.050 -0.030 -0.015
+[1] 
+[1] BYMA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3329.2   3431.1  -1649.6   3299.2     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5904 -0.3173 -0.2419 -0.1397 11.1150 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.01479  0.1216  
+ Spot        (Intercept) 0.27855  0.5278  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+             Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.901630   0.200600 -14.465 < 0.0000000000000002 ***
+BH          -0.023034   0.137870  -0.167               0.8673    
+CF           0.222915   0.116280   1.917               0.0552 .  
+DH          -0.278793   0.354145  -0.787               0.4311    
+ME           0.016638   0.115571   0.144               0.8855    
+OC          -0.090264   0.142815  -0.632               0.5274    
+RB           0.864912   0.112726   7.673   0.0000000000000168 ***
+RG           0.062837   0.261299   0.240               0.8100    
+SC          -0.353309   0.147180  -2.401               0.0164 *  
+WB          -1.367915   0.285623  -4.789   0.0000016741571282 ***
+WE          -0.009807   0.143762  -0.068               0.9456    
+YC           0.019672   0.186786   0.105               0.9161    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     CF     DH     ME     OC     RB     RG     SC     WB    
+BH -0.004                                                               
+CF -0.067 -0.046                                                        
+DH -0.067  0.038  0.012                                                 
+ME -0.119 -0.221 -0.159  0.025                                          
+OC -0.032 -0.422  0.029 -0.070 -0.152                                   
+RB -0.078 -0.049 -0.362  0.013 -0.047  0.022                            
+RG -0.042  0.049  0.026  0.011  0.011 -0.003  0.078                     
+SC -0.033 -0.063 -0.014  0.001 -0.036  0.013 -0.016 -0.270              
+WB -0.072 -0.001  0.018 -0.046  0.034 -0.013  0.038  0.019  0.013       
+WE -0.063 -0.075 -0.009 -0.064 -0.003 -0.028 -0.022  0.003  0.017  0.025
+YC -0.034 -0.110 -0.165  0.007  0.155  0.000 -0.082  0.008 -0.023  0.002
+   WE    
+BH       
+CF       
+DH       
+ME       
+OC       
+RB       
+RG       
+SC       
+WB       
+WE       
+YC  0.018
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS CF
+[1] ===========================
+[1] CFMA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance  Chisq Chi Df
+macaw_model          6 3194.6 3235.3 -1591.3   3182.6              
+largersmaller_model  6 3228.4 3269.1 -1608.2   3216.4  0.000      0
+simdifsize_model     6 3211.1 3251.8 -1599.5   3199.1 17.286      0
+size_model           7 3179.3 3226.9 -1582.7   3165.3 33.776      1
+back_model           7 3196.0 3243.5 -1591.0   3182.0  0.000      0
+clade_model          9 3226.8 3287.9 -1604.4   3208.8  0.000      2
+head_model           9 3174.4 3235.6 -1578.2   3156.4 52.312      0
+face_model           9 3257.2 3318.4 -1619.6   3239.2  0.000      0
+species_model       15 3231.5 3333.4 -1600.7   3201.5 37.758      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model                     1    
+simdifsize_model    < 0.00000000000000022 ***
+size_model                 0.000000006184 ***
+back_model                              1    
+clade_model                             1    
+head_model          < 0.00000000000000022 ***
+face_model                              1    
+species_model              0.000001252833 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta
+7          head_model     9 -1578.224 3174.448  0.00000
+4          size_model     7 -1582.653 3179.307  4.85850
+1         macaw_model     6 -1591.277 3194.554 20.10566
+5          back_model     7 -1590.990 3195.981 21.53281
+3    simdifsize_model     6 -1599.541 3211.082 36.63426
+6         clade_model     9 -1604.380 3226.761 52.31245
+2 largersmaller_model     6 -1608.184 3228.368 53.91998
+9       species_model    15 -1600.733 3231.466 57.01768
+8          face_model     9 -1619.612 3257.223 82.77526
+                       weight
+7 0.9189765542355541327879109
+4 0.0809644737445056605906757
+1 0.0000395746168082640350887
+5 0.0000193872045722734066993
+3 0.0000000101923639081399582
+6 0.0000000000040160594174479
+2 0.0000000000017977487979567
+9 0.0000000000003820087538526
+8 0.0000000000000000009747336
+[1] 
+[1] CFMA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3174.4   3235.6  -1578.2   3156.4     6577 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.4447 -0.3175 -0.2419 -0.1670  8.2500 
+
+Random effects:
+ Groups      Name        Variance               Std.Dev.      
+ Rdate       (Intercept) 0.00000000000044664081 0.000000668312
+ Xhr.dectime (Intercept) 0.00000000000000001424 0.000000003774
+ Spot        (Intercept) 0.11396176946325536905 0.337582241037
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value            Pr(>|z|)    
+(Intercept)  -3.3647     0.1664 -20.221 <0.0000000000000002 ***
+head_B       -0.2782     0.1296  -2.146              0.0318 *  
+head_G        1.2178     0.1233   9.878 <0.0000000000000002 ***
+head_R       -0.1883     0.1560  -1.207              0.2275    
+head_O       -0.1886     0.1801  -1.047              0.2950    
+head_K       -0.2411     0.1403  -1.718              0.0857 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) head_B head_G head_R head_O
+head_B -0.073                            
+head_G -0.519 -0.122                     
+head_R -0.057 -0.279  0.039              
+head_O -0.172  0.053  0.085  0.026       
+head_K -0.004 -0.317 -0.111  0.037 -0.041
+[1] 
+[1] CFMA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3231.5   3333.4  -1600.7   3201.5     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5169 -0.2869 -0.2326 -0.2028  6.5404 
+
+Random effects:
+ Groups      Name        Variance         Std.Dev. 
+ Rdate       (Intercept) 0.00000000000004 0.0000002
+ Xhr.dectime (Intercept) 0.00000000000000 0.0000000
+ Spot        (Intercept) 0.09357346668439 0.3058978
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.85068    0.13974 -20.400 < 0.0000000000000002 ***
+BH          -0.02045    0.15325  -0.133               0.8938    
+BY          -0.25071    0.14003  -1.790               0.0734 .  
+DH           0.27396    0.23801   1.151               0.2497    
+ME          -0.05602    0.12624  -0.444               0.6572    
+OC          -0.08322    0.15287  -0.544               0.5862    
+RB           0.84485    0.11432   7.390    0.000000000000147 ***
+RG          -0.76173    0.37800  -2.015               0.0439 *  
+SC          -0.02754    0.16545  -0.166               0.8678    
+WB          -0.28116    0.17885  -1.572               0.1159    
+WE           0.24911    0.13378   1.862               0.0626 .  
+YC          -0.12563    0.21946  -0.572               0.5670    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     DH     ME     OC     RB     RG     SC     WB    
+BH -0.005                                                               
+BY -0.056 -0.083                                                        
+DH -0.110  0.051  0.017                                                 
+ME -0.185 -0.243 -0.042  0.042                                          
+OC -0.033 -0.408 -0.068 -0.105 -0.137                                   
+RB -0.173 -0.071 -0.077  0.029 -0.114  0.036                            
+RG -0.036  0.044 -0.102  0.009  0.019  0.006  0.072                     
+SC -0.044 -0.039 -0.311  0.001 -0.041  0.025  0.003 -0.169              
+WB -0.178  0.001  0.025 -0.065  0.063 -0.021  0.078  0.019  0.020       
+WE -0.126 -0.075  0.022 -0.079  0.008 -0.035 -0.020  0.001  0.009  0.026
+YC -0.052 -0.111 -0.121  0.010  0.123  0.020 -0.131  0.021  0.015  0.009
+   WE    
+BH       
+BY       
+DH       
+ME       
+OC       
+RB       
+RG       
+SC       
+WB       
+WE       
+YC  0.017
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS DH
+[1] ===========================
+[1] DHPA
+Data: df
+Models:
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance   Chisq Chi Df
+largersmaller_model  5 1889.3 1923.3 -939.65   1879.3               
+macaw_model          6 1878.7 1919.5 -933.35   1866.7 12.6115      1
+simdifsize_model     6 1875.9 1916.7 -931.96   1863.9  2.7794      0
+size_model           7 1861.8 1909.3 -923.89   1847.8 16.1322      1
+back_model           7 1880.5 1928.0 -933.23   1866.5  0.0000      0
+clade_model          9 1878.0 1939.1 -929.98   1860.0  6.5084      2
+head_model           9 1876.2 1937.3 -929.08   1858.2  1.7912      0
+face_model           9 1874.0 1935.1 -927.98   1856.0  2.2150      0
+species_model       15 1873.3 1975.2 -921.63   1843.3 12.6890      6
+                               Pr(>Chisq)    
+largersmaller_model                          
+macaw_model                     0.0003834 ***
+simdifsize_model    < 0.00000000000000022 ***
+size_model                     0.00005907 ***
+back_model                      1.0000000    
+clade_model                     0.0386114 *  
+head_model          < 0.00000000000000022 ***
+face_model          < 0.00000000000000022 ***
+species_model                   0.0482494 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta         weight
+4          size_model     7 -923.8910 1861.782  0.00000 0.992354519195
+9       species_model    15 -921.6315 1873.263 11.48096 0.003188658510
+8          face_model     9 -927.9760 1873.952 12.16995 0.002259412062
+3    simdifsize_model     6 -931.9571 1875.914 14.13216 0.000847046624
+7          head_model     9 -929.0835 1876.167 14.38495 0.000746473117
+6         clade_model     9 -929.9791 1877.958 16.17617 0.000304828665
+2         macaw_model     6 -933.3468 1878.694 16.91152 0.000211046273
+5          back_model     7 -933.2333 1880.467 18.68459 0.000086968138
+1 largersmaller_model     5 -939.6526 1889.305 27.52302 0.000001047416
+[1] 
+[1] DHPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) +  
+    (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1861.8   1909.3   -923.9   1847.8     6579 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.4117 -0.2218 -0.1354 -0.0771 17.2400 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.03294  0.1815  
+ Xhr.dectime (Intercept) 0.07015  0.2649  
+ Spot        (Intercept) 0.67257  0.8201  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -4.3922     0.3386 -12.971 < 0.0000000000000002 ***
+size_S        1.2373     0.1630   7.592   0.0000000000000316 ***
+size_M       -0.1961     0.1963  -0.999                0.318    
+size_L       -0.2567     0.2717  -0.944                0.345    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) size_S size_M
+size_S -0.328              
+size_M -0.214 -0.011       
+size_L -0.112  0.053 -0.140
+[1] 
+[1] DHPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1873.3   1975.2   -921.6   1843.3     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5895 -0.2200 -0.1298 -0.0926 15.6962 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.02977  0.1726  
+ Xhr.dectime (Intercept) 0.05794  0.2407  
+ Spot        (Intercept) 0.44933  0.6703  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+             Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -4.056065   0.282881 -14.338 < 0.0000000000000002 ***
+BH          -0.555683   0.378332  -1.469                0.142    
+BY          -0.004224   0.317317  -0.013                0.989    
+CF           0.390992   0.250531   1.561                0.119    
+ME           0.134936   0.267053   0.505                0.613    
+OC           0.157213   0.234027   0.672                0.502    
+RB          -0.235044   0.273506  -0.859                0.390    
+RG           0.222533   0.635815   0.350                0.726    
+SC          -0.627613   0.470910  -1.333                0.183    
+WB           1.055890   0.150735   7.005     0.00000000000247 ***
+WE           0.639265   0.148925   4.293     0.00001766389230 ***
+YC          -1.364762   1.016711  -1.342                0.179    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     ME     OC     RB     RG     SC     WB    
+BH -0.043                                                               
+BY -0.077 -0.062                                                        
+CF -0.109 -0.014 -0.033                                                 
+ME -0.169 -0.192 -0.067 -0.219                                          
+OC -0.038 -0.246 -0.026  0.009 -0.126                                   
+RB -0.059 -0.038 -0.058 -0.263 -0.042  0.008                            
+RG -0.038  0.039 -0.145  0.045  0.015 -0.008  0.025                     
+SC -0.040 -0.018 -0.284 -0.003  0.007  0.013  0.011 -0.240              
+WB -0.211  0.011  0.065  0.086  0.114 -0.054  0.072  0.052  0.033       
+WE -0.117 -0.026  0.033  0.021  0.035 -0.067 -0.026  0.012  0.009  0.098
+YC -0.033 -0.038 -0.034 -0.056  0.050  0.004 -0.041  0.014  0.004  0.009
+   WE    
+BH       
+BY       
+CF       
+ME       
+OC       
+RB       
+RG       
+SC       
+WB       
+WE       
+YC  0.016
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS ME
+[1] ===========================
+[1] MEPA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance  Chisq Chi Df
+macaw_model          6 2847.6 2888.3 -1417.8   2835.6              
+largersmaller_model  6 2847.6 2888.3 -1417.8   2835.6  0.000      0
+simdifsize_model     6 2853.6 2894.4 -1420.8   2841.6  0.000      0
+size_model           7 2802.1 2849.7 -1394.1   2788.1 53.500      1
+back_model           7 2847.8 2895.3 -1416.9   2833.8  0.000      0
+clade_model          9 2791.0 2852.2 -1386.5   2773.0 60.766      2
+head_model           9 2817.5 2878.7 -1399.8   2799.5  0.000      0
+face_model           9 2827.7 2888.8 -1404.8   2809.7  0.000      0
+species_model       15 2807.3 2909.2 -1388.6   2777.3 32.433      6
+                            Pr(>Chisq)    
+macaw_model                               
+largersmaller_model                  1    
+simdifsize_model                     1    
+size_model          0.0000000000002585 ***
+back_model                           1    
+clade_model         0.0000000000000638 ***
+head_model                           1    
+face_model                           1    
+species_model       0.0000134770945514 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta
+6         clade_model     9 -1386.506 2791.011  0.00000
+4          size_model     7 -1394.056 2802.113 11.10182
+9       species_model    15 -1388.634 2807.269 16.25751
+7          head_model     9 -1399.771 2817.543 26.53179
+8          face_model     9 -1404.851 2827.702 36.69045
+1         macaw_model     6 -1417.795 2847.590 56.57856
+2 largersmaller_model     6 -1417.795 2847.590 56.57856
+5          back_model     7 -1416.889 2847.777 56.76599
+3    simdifsize_model     6 -1420.807 2853.613 62.60221
+                  weight
+6 0.99583680230748394813
+4 0.00386775364971741337
+9 0.00029370792713430210
+7 0.00000172537528985431
+8 0.00000001073884851788
+1 0.00000000000051559650
+2 0.00000000000051559650
+5 0.00000000000046947152
+3 0.00000000000002536824
+[1] 
+[1] MEPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM +  
+    (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  2791.0   2852.1  -1386.5   2773.0     6577 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.6689 -0.2889 -0.1929 -0.1783  6.4888 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.00000  0.0000  
+ Spot        (Intercept) 0.01263  0.1124  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -3.3572     0.1071 -31.339 < 0.0000000000000002 ***
+clade_SP     -0.2719     0.1139  -2.386               0.0170 *  
+clade_LP      0.7801     0.1756   4.442            0.0000089 ***
+clade_K       0.2919     0.1367   2.136               0.0327 *  
+clade_SM      1.1429     0.1156   9.890 < 0.0000000000000002 ***
+clade_LM      0.2290     0.1222   1.874               0.0610 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+         (Intr) cld_SP cld_LP clad_K cld_SM
+clade_SP -0.255                            
+clade_LP -0.033 -0.064                     
+clade_K  -0.303 -0.096  0.038              
+clade_SM -0.488 -0.042 -0.144  0.070       
+clade_LM -0.223 -0.116 -0.121  0.072 -0.136
+[1] 
+[1] MEPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  2807.3   2909.2  -1388.6   2777.3     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.7534 -0.2350 -0.2022 -0.1856  7.9660 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0        0       
+ Xhr.dectime (Intercept) 0        0       
+ Spot        (Intercept) 0        0       
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+             Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.196648   0.089888 -35.562 < 0.0000000000000002 ***
+BH          -0.170821   0.158843  -1.075             0.282192    
+BY           0.270413   0.139450   1.939             0.052483 .  
+CF           0.300332   0.133000   2.258             0.023937 *  
+DH          -0.059179   0.286296  -0.207             0.836239    
+OC          -0.001048   0.160674  -0.007             0.994795    
+RB           0.893079   0.129293   6.907     0.00000000000494 ***
+RG          -0.952659   0.402615  -2.366             0.017973 *  
+SC           0.188933   0.162459   1.163             0.244847    
+WB          -0.527428   0.204792  -2.575             0.010012 *  
+WE           0.287575   0.138701   2.073             0.038139 *  
+YC           0.689919   0.181309   3.805             0.000142 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     OC     RB     RG     SC     WB    
+BH -0.043                                                               
+BY -0.177 -0.118                                                        
+CF -0.231 -0.090 -0.082                                                 
+DH -0.154  0.078  0.043  0.034                                          
+OC -0.102 -0.488 -0.092  0.013 -0.094                                   
+RB -0.295 -0.105 -0.084 -0.408  0.049 -0.005                            
+RG -0.057  0.045 -0.093  0.027  0.013 -0.002  0.041                     
+SC -0.117 -0.069 -0.355 -0.002  0.011  0.018 -0.006 -0.166              
+WB -0.327  0.041  0.061  0.083 -0.069  0.003  0.097  0.021  0.044       
+WE -0.313 -0.043  0.052  0.050 -0.092 -0.013 -0.009  0.006  0.038 -0.038
+YC -0.028 -0.109 -0.119 -0.156  0.006  0.035 -0.074  0.000  0.030  0.003
+   WE    
+BH       
+BY       
+CF       
+DH       
+OC       
+RB       
+RG       
+SC       
+WB       
+WE       
+YC  0.037
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS OC
+[1] ===========================
+[1] OCPA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance  Chisq Chi Df
+macaw_model          6 3375.9 3416.6 -1681.9   3363.9              
+largersmaller_model  6 3445.2 3486.0 -1716.6   3433.2  0.000      0
+simdifsize_model     6 3401.7 3442.4 -1694.8   3389.7 43.577      0
+size_model           7 3418.9 3466.5 -1702.5   3404.9  0.000      1
+back_model           7 3372.1 3419.7 -1679.1   3358.1 46.781      0
+head_model           8 3356.4 3410.7 -1670.2   3340.4 17.775      1
+clade_model          9 3398.0 3459.1 -1690.0   3380.0  0.000      1
+face_model           9 3404.4 3465.5 -1693.2   3386.4  0.000      0
+species_model       15 3378.9 3480.8 -1674.5   3348.9 37.465      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model                     1    
+simdifsize_model    < 0.00000000000000022 ***
+size_model                              1    
+back_model          < 0.00000000000000022 ***
+head_model                    0.000024866 ***
+clade_model                             1    
+face_model                              1    
+species_model                 0.000001429 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta
+6          head_model     8 -1670.186 3356.372  0.00000
+5          back_model     7 -1679.073 3372.147 15.77476
+1         macaw_model     6 -1681.939 3375.878 19.50582
+9       species_model    15 -1674.474 3378.949 22.57653
+7         clade_model     9 -1689.989 3397.979 41.60644
+3    simdifsize_model     6 -1694.828 3401.656 45.28350
+8          face_model     9 -1693.207 3404.414 48.04145
+4          size_model     7 -1702.464 3418.928 62.55541
+2 largersmaller_model     6 -1716.616 3445.233 88.86058
+                        weight
+6 0.99955410054055415791651740
+5 0.00037528546811816651312607
+1 0.00005809949111989625027781
+9 0.00001251339371107767468947
+7 0.00000000092274619454386175
+3 0.00000000014676375858768001
+8 0.00000000003696059964852961
+4 0.00000000000002606583357150
+2 0.00000000000000000005057964
+[1] 
+[1] OCPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3356.4   3410.7  -1670.2   3340.4     6578 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.6630 -0.3287 -0.2592 -0.1621  8.0553 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.04679  0.2163  
+ Spot        (Intercept) 0.07070  0.2659  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -3.8242     0.1597 -23.946 < 0.0000000000000002 ***
+head_B        0.5277     0.1222   4.320       0.000015576039 ***
+head_G        1.2856     0.1250  10.285 < 0.0000000000000002 ***
+head_R       -0.3023     0.1545  -1.956               0.0504 .  
+head_O        0.8939     0.1388   6.442       0.000000000118 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) head_B head_G head_R
+head_B -0.179                     
+head_G -0.598 -0.132              
+head_R -0.061 -0.248  0.042       
+head_O -0.303  0.116  0.165  0.035
+fit warnings:
+fixed-effect model matrix is rank deficient so dropping 1 column / coefficient
+[1] 
+[1] OCPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3378.9   3480.8  -1674.5   3348.9     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.7813 -0.3022 -0.2479 -0.2012  9.7087 
+
+Random effects:
+ Groups      Name        Variance             Std.Dev.     
+ Rdate       (Intercept) 0.000000000000005684 0.00000007539
+ Xhr.dectime (Intercept) 0.040267665659047096 0.20066804843
+ Spot        (Intercept) 0.066044894286265102 0.25699201211
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.31773    0.13408 -24.745 < 0.0000000000000002 ***
+BH           0.26955    0.13604   1.981              0.04755 *  
+BY           0.33343    0.13471   2.475              0.01332 *  
+CF           0.53694    0.12822   4.188     0.00002817601967 ***
+DH           1.12758    0.16311   6.913     0.00000000000474 ***
+ME           0.23287    0.12835   1.814              0.06963 .  
+RB           0.18470    0.13011   1.420              0.15574    
+RG          -1.84315    0.59301  -3.108              0.00188 ** 
+SC          -0.09526    0.16442  -0.579              0.56234    
+WB           0.68034    0.13761   4.944     0.00000076489441 ***
+WE           0.51610    0.11750   4.393     0.00001120280426 ***
+YC           0.46335    0.19212   2.412              0.01587 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     RB     RG     SC     WB    
+BH -0.044                                                               
+BY -0.099 -0.114                                                        
+CF -0.149 -0.037 -0.038                                                 
+DH -0.158  0.007  0.019  0.033                                          
+ME -0.228 -0.300 -0.067 -0.149  0.052                                   
+RB -0.082 -0.051 -0.069 -0.355  0.021 -0.025                            
+RG -0.023  0.030 -0.055  0.018  0.008  0.006  0.032                     
+SC -0.046 -0.031 -0.313  0.011  0.002 -0.036  0.016 -0.101              
+WB -0.272  0.001  0.039  0.069 -0.074  0.106  0.057  0.014  0.025       
+WE -0.159 -0.077  0.036  0.023 -0.093  0.020 -0.038 -0.002  0.005  0.040
+YC -0.059 -0.117 -0.116 -0.145  0.017  0.184 -0.104  0.004  0.011  0.008
+   WE    
+BH       
+BY       
+CF       
+DH       
+ME       
+RB       
+RG       
+SC       
+WB       
+WE       
+YC  0.033
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS RB
+[1] ===========================
+[1] RBMA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance   Chisq Chi Df
+macaw_model          6 2422.8 2463.6 -1205.4   2410.8               
+largersmaller_model  6 2418.5 2459.2 -1203.2   2406.5  4.3324      0
+simdifsize_model     6 2426.5 2467.3 -1207.3   2414.5  0.0000      0
+size_model           7 2410.7 2458.3 -1198.3   2396.7 17.8290      1
+back_model           7 2423.3 2470.8 -1204.6   2409.3  0.0000      0
+clade_model          9 2430.4 2491.6 -1206.2   2412.4  0.0000      2
+head_model           9 2391.8 2452.9 -1186.9   2373.8 38.6230      0
+face_model           9 2427.5 2488.6 -1204.8   2409.5  0.0000      0
+species_model       15 2434.6 2536.5 -1202.3   2404.6  4.8928      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model < 0.00000000000000022 ***
+simdifsize_model                   1.0000    
+size_model                     0.00002417 ***
+back_model                         1.0000    
+clade_model                        1.0000    
+head_model          < 0.00000000000000022 ***
+face_model                         1.0000    
+species_model                      0.5576    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta             weight
+7          head_model     9 -1186.901 2391.801  0.00000 0.9999195962751719
+4          size_model     7 -1198.354 2410.708 18.90744 0.0000783910808943
+2 largersmaller_model     6 -1203.229 2418.457 26.65632 0.0000016278677978
+1         macaw_model     6 -1205.395 2422.790 30.98868 0.0000001865776707
+5          back_model     7 -1204.632 2423.264 31.46294 0.0000001471888835
+3    simdifsize_model     6 -1207.269 2426.537 34.73644 0.0000000286445573
+8          face_model     9 -1204.747 2427.494 35.69316 0.0000000177539189
+6         clade_model     9 -1206.212 2430.424 38.62296 0.0000000041029513
+9       species_model    15 -1202.301 2434.601 42.80031 0.0000000005081543
+[1] 
+[1] RBMA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  2391.8   2452.9  -1186.9   2373.8     6577 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.3472 -0.2800 -0.1735 -0.1553  9.4838 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.04471  0.2114  
+ Spot        (Intercept) 0.00000  0.0000  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.68533    0.13218 -27.881 < 0.0000000000000002 ***
+head_B      -0.05138    0.14661  -0.350             0.726009    
+head_G       1.18683    0.14565   8.149 0.000000000000000368 ***
+head_R       0.20071    0.17282   1.161             0.245488    
+head_O      -0.77826    0.23509  -3.310             0.000931 ***
+head_K      -0.30482    0.16948  -1.799             0.072093 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) head_B head_G head_R head_O
+head_B -0.143                            
+head_G -0.784 -0.136                     
+head_R -0.118 -0.375  0.042              
+head_O -0.259  0.135  0.083  0.050       
+head_K  0.012 -0.328 -0.124  0.026 -0.013
+[1] 
+[1] RBMA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  2434.6   2536.5  -1202.3   2404.6     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.4489 -0.2365 -0.2002 -0.1791  7.8981 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.04429  0.2105  
+ Spot        (Intercept) 0.00000  0.0000  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.25534    0.10012 -32.515 < 0.0000000000000002 ***
+BH          -0.05048    0.18112  -0.279             0.780473    
+BY          -0.16640    0.16769  -0.992             0.321061    
+CF           0.67674    0.13835   4.892             0.000001 ***
+DH           0.36706    0.25926   1.416             0.156841    
+ME           0.24124    0.14703   1.641             0.100853    
+OC          -0.15821    0.18373  -0.861             0.389177    
+RG          -0.74498    0.43429  -1.715             0.086271 .  
+SC           0.32981    0.18724   1.761             0.078164 .  
+WB          -0.84051    0.23732  -3.542             0.000398 ***
+WE           0.33821    0.15021   2.252             0.024348 *  
+YC           0.30815    0.23978   1.285             0.198754    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RG     SC     WB    
+BH -0.014                                                               
+BY -0.131 -0.095                                                        
+CF -0.311 -0.081 -0.083                                                 
+DH -0.203  0.075  0.042  0.048                                          
+ME -0.293 -0.244 -0.056 -0.270  0.086                                   
+OC -0.054 -0.416 -0.073  0.040 -0.115 -0.134                            
+RG -0.063  0.029 -0.100  0.046  0.016  0.026  0.001                     
+SC -0.110 -0.060 -0.375  0.002  0.018 -0.049  0.015 -0.177              
+WB -0.290  0.027  0.039  0.092 -0.065  0.105 -0.009  0.021  0.036       
+WE -0.351 -0.062  0.046  0.045 -0.083  0.081 -0.021  0.011  0.032 -0.026
+YC -0.090 -0.124 -0.127 -0.185  0.026  0.153 -0.002  0.020  0.013  0.025
+   WE    
+BH       
+BY       
+CF       
+DH       
+ME       
+OC       
+RG       
+SC       
+WB       
+WE       
+YC  0.043
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS RG
+[1] ===========================
+[1] RGMA
+Data: df
+Models:
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance   Chisq Chi Df
+largersmaller_model  5 1396.0 1430.0 -693.01   1386.0               
+macaw_model          6 1367.3 1408.1 -677.66   1355.3 30.6947      1
+simdifsize_model     6 1377.0 1417.8 -682.53   1365.0  0.0000      0
+size_model           7 1364.8 1412.3 -675.40   1350.8 14.2568      1
+back_model           7 1374.0 1421.5 -679.98   1360.0  0.0000      0
+clade_model          9 1373.6 1434.7 -677.80   1355.6  4.3478      2
+head_model           9 1375.5 1436.7 -678.77   1357.5  0.0000      0
+face_model           9 1374.6 1435.8 -678.31   1356.6  0.9313      0
+species_model       15 1376.5 1478.3 -673.23   1346.5 10.1606      6
+                               Pr(>Chisq)    
+largersmaller_model                          
+macaw_model                  0.0000000302 ***
+simdifsize_model                1.0000000    
+size_model                      0.0001595 ***
+back_model                      1.0000000    
+clade_model                     0.1137332    
+head_model                      1.0000000    
+face_model          < 0.00000000000000022 ***
+species_model                   0.1180495    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC     delta          weight
+4          size_model     7 -675.3978 1364.796  0.000000 0.7559935658964
+2         macaw_model     6 -677.6598 1367.320  2.523843 0.2140290104675
+6         clade_model     9 -677.8014 1373.603  8.807176 0.0092483457095
+5          back_model     7 -679.9753 1373.951  9.154977 0.0077721307703
+8          face_model     9 -678.3065 1374.613  9.817404 0.0055807935196
+7          head_model     9 -678.7722 1375.544 10.748723 0.0035031805937
+9       species_model    15 -673.2262 1376.452 11.656800 0.0022247242271
+3    simdifsize_model     6 -682.5262 1377.052 12.256792 0.0016481230671
+1 largersmaller_model     5 -693.0071 1396.014 31.218516 0.0000001257487
+[1] 
+[1] RGMA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) +  
+    (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1364.8   1412.3   -675.4   1350.8     6579 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.3710 -0.1598 -0.0953 -0.0733 14.8099 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.03962  0.199   
+ Xhr.dectime (Intercept) 0.00000  0.000   
+ Spot        (Intercept) 0.20706  0.455   
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -4.8266     0.2510 -19.230 < 0.0000000000000002 ***
+size_S       -0.1683     0.1704  -0.988               0.3234    
+size_M        0.4855     0.2029   2.392               0.0167 *  
+size_L        1.5007     0.1879   7.985   0.0000000000000014 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) size_S size_M
+size_S -0.156              
+size_M -0.318 -0.275       
+size_L -0.298 -0.030 -0.132
+[1] 
+[1] RGMA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1376.5   1478.3   -673.2   1346.5     6571 
+
+Scaled residuals: 
+   Min     1Q Median     3Q    Max 
+-0.515 -0.162 -0.102 -0.086 34.964 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.0000   0.0000  
+ Xhr.dectime (Intercept) 0.0000   0.0000  
+ Spot        (Intercept) 0.2093   0.4575  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -4.45794    0.23606 -18.885 < 0.0000000000000002 ***
+BH           0.11580    0.22576   0.513               0.6080    
+BY           0.88676    0.19158   4.629           0.00000368 ***
+CF          -0.47302    0.20867  -2.267               0.0234 *  
+DH          -1.13011    1.01973  -1.108               0.2678    
+ME           0.23532    0.19343   1.217               0.2238    
+OC           0.03018    0.22635   0.133               0.8939    
+RB           0.32303    0.19633   1.645               0.0999 .  
+SC           0.81035    0.18566   4.365           0.00001273 ***
+WB          -1.12605    0.60853  -1.850               0.0642 .  
+WE          -0.05186    0.26493  -0.196               0.8448    
+YC          -0.16391    0.32843  -0.499               0.6177    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     SC     WB    
+BH  0.011                                                               
+BY -0.198 -0.064                                                        
+CF -0.040 -0.038 -0.056                                                 
+DH -0.075  0.021  0.019  0.008                                          
+ME -0.180 -0.263 -0.033 -0.109  0.016                                   
+OC -0.023 -0.462 -0.057  0.071 -0.033 -0.187                            
+RB -0.095 -0.077 -0.004 -0.396  0.006 -0.028 -0.007                     
+SC -0.107 -0.025 -0.391 -0.005  0.002 -0.010  0.044  0.060              
+WB -0.152  0.001  0.052  0.002 -0.026  0.041 -0.013  0.028  0.034       
+WE -0.119 -0.068  0.047 -0.011 -0.040 -0.014 -0.045 -0.010  0.014  0.001
+YC -0.013 -0.114 -0.071 -0.155  0.004  0.146 -0.018 -0.086  0.001 -0.003
+   WE    
+BH       
+BY       
+CF       
+DH       
+ME       
+OC       
+RB       
+SC       
+WB       
+WE       
+YC -0.007
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS SC
+[1] ===========================
+[1] SCMA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance   Chisq Chi Df
+macaw_model          6 3068.3 3109.0 -1528.1   3056.3               
+largersmaller_model  6 3068.3 3109.0 -1528.1   3056.3  0.0000      0
+simdifsize_model     6 3075.2 3115.9 -1531.6   3063.2  0.0000      0
+size_model           7 3034.0 3081.6 -1510.0   3020.0 43.1078      1
+back_model           7 3068.8 3116.4 -1527.4   3054.8  0.0000      0
+clade_model          9 3068.5 3129.7 -1525.3   3050.5  4.2808      2
+head_model           9 3041.6 3102.7 -1511.8   3023.6 26.9197      0
+face_model           9 3015.1 3076.2 -1498.6   2997.1 26.5002      0
+species_model       15 3061.2 3163.1 -1515.6   3031.2  0.0000      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model                1.0000    
+simdifsize_model                   1.0000    
+size_model               0.00000000005181 ***
+back_model                         1.0000    
+clade_model                        0.1176    
+head_model          < 0.00000000000000022 ***
+face_model          < 0.00000000000000022 ***
+species_model                      1.0000    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta
+8          face_model     9 -1498.557 3015.113  0.00000
+4          size_model     7 -1510.021 3034.042 18.92833
+7          head_model     9 -1511.807 3041.614 26.50022
+9       species_model    15 -1515.589 3061.178 46.06499
+1         macaw_model     6 -1528.132 3068.265 53.15143
+2 largersmaller_model     6 -1528.132 3068.265 53.15143
+6         clade_model     9 -1525.267 3068.533 53.41995
+5          back_model     7 -1527.407 3068.814 53.70072
+3    simdifsize_model     6 -1531.575 3075.149 60.03613
+                  weight
+8 0.99992066337180296465
+4 0.00007757650923771886
+7 0.00000176000909772420
+9 0.00000000009932998656
+1 0.00000000000287262716
+2 0.00000000000287262716
+6 0.00000000000251171298
+5 0.00000000000218274238
+3 0.00000000000009189388
+[1] 
+[1] SCMA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3015.1   3076.2  -1498.6   2997.1     6577 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.4623 -0.4024 -0.1766 -0.1372 13.0449 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.0000   0.0000  
+ Xhr.dectime (Intercept) 0.0000   0.0000  
+ Spot        (Intercept) 0.1698   0.4121  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.42975    0.18420 -18.620 < 0.0000000000000002 ***
+face_B      -0.04205    0.13533  -0.311             0.756010    
+face_O      -1.42372    0.37217  -3.825             0.000131 ***
+face_Y       0.17086    0.12754   1.340             0.180360    
+face_W       1.20136    0.12687   9.469 < 0.0000000000000002 ***
+face_G       0.05139    0.10704   0.480             0.631175    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+       (Intr) face_B face_O face_Y face_W
+face_B  0.024                            
+face_O -0.114  0.002                     
+face_Y -0.062 -0.429 -0.010              
+face_W -0.392 -0.059  0.111 -0.043       
+face_G -0.193 -0.258  0.015 -0.080 -0.076
+[1] 
+[1] SCMA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  3061.2   3163.1  -1515.6   3031.2     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.6380 -0.3138 -0.2002 -0.1510 13.7270 
+
+Random effects:
+ Groups      Name        Variance             Std.Dev.     
+ Rdate       (Intercept) 0.000000000000003961 0.00000006294
+ Xhr.dectime (Intercept) 0.000000000000000000 0.00000000000
+ Spot        (Intercept) 0.209032282614469905 0.45720048405
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -3.0857     0.1837 -16.802 < 0.0000000000000002 ***
+BH           -0.1412     0.1414  -0.998               0.3182    
+BY            0.7224     0.1124   6.430       0.000000000128 ***
+CF            0.2407     0.1211   1.988               0.0468 *  
+DH           -0.3358     0.4004  -0.839               0.4017    
+ME            0.1804     0.1187   1.520               0.1286    
+OC            0.1865     0.1407   1.325               0.1850    
+RB            0.2918     0.1213   2.406               0.0161 *  
+RG           -0.2078     0.2339  -0.888               0.3744    
+WB           -1.5862     0.3709  -4.277       0.000018927776 ***
+WE            0.0384     0.1556   0.247               0.8050    
+YC           -0.2250     0.2054  -1.096               0.2733    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG     WB    
+BH  0.004                                                               
+BY -0.106 -0.092                                                        
+CF -0.080 -0.031 -0.038                                                 
+DH -0.081  0.042  0.019  0.013                                          
+ME -0.145 -0.221 -0.055 -0.149  0.027                                   
+OC -0.036 -0.444 -0.064  0.042 -0.073 -0.167                            
+RB -0.056 -0.048 -0.045 -0.376  0.006 -0.021  0.022                     
+RG -0.049  0.058 -0.212  0.043  0.011  0.036  0.020  0.095              
+WB -0.079  0.000  0.031  0.014 -0.037  0.031 -0.015  0.023  0.016       
+WE -0.081 -0.070  0.040 -0.001 -0.059 -0.009 -0.029 -0.035 -0.003  0.014
+YC -0.024 -0.094 -0.101 -0.143  0.006  0.154  0.000 -0.092  0.024 -0.004
+   WE    
+BH       
+BY       
+CF       
+DH       
+ME       
+OC       
+RB       
+RG       
+WB       
+WE       
+YC  0.007
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS WB
+[1] ===========================
+[1] WBPA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance  Chisq Chi Df
+macaw_model          6 1971.0 2011.8 -979.53   1959.0              
+largersmaller_model  6 1978.5 2019.2 -983.24   1966.5 0.0000      0
+simdifsize_model     6 1976.7 2017.5 -982.35   1964.7 1.7805      0
+size_model           7 1975.8 2023.3 -980.89   1961.8 2.9238      1
+back_model           7 1973.0 2020.6 -979.51   1959.0 2.7506      0
+head_model           8 1979.6 2034.0 -981.81   1963.6 0.0000      1
+face_model           8 1987.4 2041.8 -985.71   1971.4 0.0000      0
+clade_model          9 1979.9 2041.0 -980.96   1961.9 9.5015      1
+species_model       15 1991.1 2093.0 -980.53   1961.1 0.8482      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model              1.000000    
+simdifsize_model    < 0.00000000000000022 ***
+size_model                       0.087280 .  
+back_model          < 0.00000000000000022 ***
+head_model                       1.000000    
+face_model                       1.000000    
+clade_model                      0.002053 ** 
+species_model                    0.990719    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC     delta        weight
+1         macaw_model     6 -979.5270 1971.054  0.000000 0.63344947395
+5          back_model     7 -979.5102 1973.020  1.966543 0.23696409531
+4          size_model     7 -980.8855 1975.771  4.717118 0.05989669903
+3    simdifsize_model     6 -982.3475 1976.695  5.640964 0.03773916305
+2 largersmaller_model     6 -983.2377 1978.475  7.421438 0.01549413365
+6          head_model     8 -981.8140 1979.628  8.574064 0.00870718058
+8         clade_model     9 -980.9575 1979.915  8.861012 0.00754340951
+7          face_model     8 -985.7082 1987.416 16.362521 0.00017727021
+9       species_model    15 -980.5334 1991.067 20.012826 0.00002857472
+[1] 
+[1] WBPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) +  
+    (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1971.1   2011.8   -979.5   1959.1     6580 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.3721 -0.2397 -0.1386 -0.1017 14.1726 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.04546  0.2132  
+ Spot        (Intercept) 0.67693  0.8228  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -4.1761     0.3197 -13.064 < 0.0000000000000002 ***
+macaw_L      -0.2480     0.2359  -1.051                0.293    
+macaw_N       0.7280     0.1411   5.161          0.000000245 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr) macw_L
+macaw_L -0.111       
+macaw_N -0.311 -0.025
+[1] 
+[1] WBPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1991.1   2093.0   -980.5   1961.1     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5177 -0.2517 -0.1491 -0.0980 12.6903 
+
+Random effects:
+ Groups      Name        Variance            Std.Dev.    
+ Rdate       (Intercept) 0.00000000000001897 0.0000001377
+ Xhr.dectime (Intercept) 0.03545188273526327 0.1882867036
+ Spot        (Intercept) 0.43700018835759197 0.6610598977
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.78452    0.26714 -14.167 < 0.0000000000000002 ***
+BH          -0.16460    0.31423  -0.524             0.600390    
+BY           0.01584    0.27491   0.058             0.954054    
+CF           0.11065    0.23448   0.472             0.637002    
+DH           0.44281    0.20894   2.119             0.034061 *  
+ME          -0.45073    0.26662  -1.691             0.090924 .  
+OC           0.21960    0.22642   0.970             0.332116    
+RB           0.19047    0.21718   0.877             0.380492    
+RG          -0.20512    0.62457  -0.328             0.742602    
+SC          -0.27662    0.37322  -0.741             0.458591    
+WE           0.50817    0.14368   3.537             0.000405 ***
+YC           0.49963    0.39304   1.271             0.203652    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG     SC    
+BH -0.042                                                               
+BY -0.067 -0.073                                                        
+CF -0.085 -0.042 -0.043                                                 
+DH -0.066  0.045  0.029  0.012                                          
+ME -0.127 -0.206 -0.037 -0.181  0.064                                   
+OC -0.043 -0.271 -0.025  0.006 -0.240 -0.119                            
+RB -0.050 -0.045 -0.091 -0.287  0.025 -0.045  0.013                     
+RG -0.027  0.042 -0.109  0.028  0.013  0.009 -0.003  0.027              
+SC -0.036 -0.011 -0.321  0.015  0.007 -0.013 -0.003  0.004 -0.229       
+WE -0.091 -0.031  0.015  0.020 -0.071  0.017 -0.046 -0.031  0.009  0.011
+YC -0.080 -0.091 -0.060 -0.150  0.022  0.111  0.013 -0.070  0.027 -0.006
+   WE    
+BH       
+BY       
+CF       
+DH       
+ME       
+OC       
+RB       
+RG       
+SC       
+WE       
+YC  0.038
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS WE
+[1] ===========================
+[1] WEPA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + 
+species_model:     YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance  Chisq Chi Df
+macaw_model          6 2544.6 2585.3 -1266.3   2532.6              
+largersmaller_model  6 2557.9 2598.6 -1272.9   2545.9  0.000      0
+simdifsize_model     6 2560.4 2601.2 -1274.2   2548.4  0.000      0
+size_model           7 2564.5 2612.1 -1275.3   2550.5  0.000      1
+back_model           7 2545.2 2592.8 -1265.6   2531.2 19.302      0
+clade_model          9 2571.7 2632.9 -1276.9   2553.7  0.000      2
+head_model           9 2555.6 2616.7 -1268.8   2537.6 16.155      0
+face_model           9 2568.3 2629.5 -1275.2   2550.3  0.000      0
+species_model       15 2565.0 2666.9 -1267.5   2535.0 15.290      6
+                              Pr(>Chisq)    
+macaw_model                                 
+largersmaller_model              1.00000    
+simdifsize_model                 1.00000    
+size_model                       1.00000    
+back_model          < 0.0000000000000002 ***
+clade_model                      1.00000    
+head_model          < 0.0000000000000002 ***
+face_model                       1.00000    
+species_model                    0.01812 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC      delta          weight
+1         macaw_model     6 -1266.274 2544.548  0.0000000 0.5829666302799
+5          back_model     7 -1265.617 2545.234  0.6860698 0.4136809588949
+7          head_model     9 -1268.791 2555.582 11.0335658 0.0023428005486
+2 largersmaller_model     6 -1272.929 2557.859 13.3107673 0.0007503213494
+3    simdifsize_model     6 -1274.216 2560.432 15.8842721 0.0002072133962
+4          size_model     7 -1275.268 2564.536 19.9881150 0.0000266243910
+9       species_model    15 -1267.519 2565.037 20.4892641 0.0000207231857
+8          face_model     9 -1275.163 2568.327 23.7788422 0.0000040006791
+6         clade_model     9 -1276.868 2571.737 27.1886711 0.0000007272752
+[1] 
+[1] WEPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) +  
+    (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  2544.5   2585.3  -1266.3   2532.5     6580 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.3722 -0.2526 -0.2074 -0.1692  7.9683 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.1180   0.3435  
+ Xhr.dectime (Intercept) 0.0000   0.0000  
+ Spot        (Intercept) 0.3121   0.5587  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -4.0024     0.2450 -16.338 < 0.0000000000000002 ***
+macaw_L      -0.0262     0.1612  -0.162                0.871    
+macaw_N       0.9656     0.1424   6.779      0.0000000000121 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr) macw_L
+macaw_L -0.118       
+macaw_N -0.458 -0.013
+[1] 
+[1] WEPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB +  
+    YC + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  2565.0   2666.9  -1267.5   2535.0     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.4719 -0.2435 -0.2113 -0.1777  7.8260 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.1082   0.3289  
+ Xhr.dectime (Intercept) 0.0000   0.0000  
+ Spot        (Intercept) 0.1759   0.4194  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.59742    0.18907 -19.027 < 0.0000000000000002 ***
+BH          -0.05712    0.20477  -0.279               0.7803    
+BY           0.08556    0.18706   0.457               0.6474    
+CF           0.30115    0.17147   1.756               0.0791 .  
+DH           0.46180    0.20839   2.216               0.0267 *  
+ME           0.27420    0.17198   1.594               0.1109    
+OC           0.05251    0.18207   0.288               0.7730    
+RB           0.09790    0.17286   0.566               0.5711    
+RG          -1.13935    0.60219  -1.892               0.0585 .  
+SC          -0.12311    0.23113  -0.533               0.5943    
+WB           0.73424    0.14927   4.919          0.000000871 ***
+YC           0.60767    0.25363   2.396               0.0166 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG     SC    
+BH -0.019                                                               
+BY -0.065 -0.084                                                        
+CF -0.109 -0.036 -0.051                                                 
+DH -0.098  0.050  0.022  0.009                                          
+ME -0.194 -0.222 -0.052 -0.168  0.064                                   
+OC -0.034 -0.367 -0.058  0.028 -0.169 -0.151                            
+RB -0.075 -0.055 -0.066 -0.345  0.011 -0.022  0.025                     
+RG -0.027  0.038 -0.083  0.023  0.007  0.016  0.000  0.038              
+SC -0.043 -0.030 -0.317  0.006  0.003 -0.029  0.018  0.016 -0.141       
+WB -0.223  0.003  0.034  0.060 -0.052  0.104 -0.031  0.062  0.023  0.032
+YC -0.059 -0.111 -0.113 -0.154  0.020  0.160  0.003 -0.105  0.019  0.006
+   WB    
+BH       
+BY       
+CF       
+DH       
+ME       
+OC       
+RB       
+RG       
+SC       
+WB       
+YC  0.013
+[1] 
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS YC
+[1] ===========================
+[1] YCPA
+Data: df
+Models:
+macaw_model: focal_joins ~ macaw_L + macaw_N + (1 | Spot) + (1 | Xhr.dectime) + 
+macaw_model:     (1 | Rdate)
+largersmaller_model: focal_joins ~ larger + smaller + (1 | Spot) + (1 | Xhr.dectime) + 
+largersmaller_model:     (1 | Rdate)
+simdifsize_model: focal_joins ~ sim_size + dif_size + (1 | Spot) + (1 | Xhr.dectime) + 
+simdifsize_model:     (1 | Rdate)
+size_model: focal_joins ~ size_S + size_M + size_L + (1 | Spot) + (1 | Xhr.dectime) + 
+size_model:     (1 | Rdate)
+back_model: focal_joins ~ back_G + back_B + back_R + (1 | Spot) + (1 | Xhr.dectime) + 
+back_model:     (1 | Rdate)
+clade_model: focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM + 
+clade_model:     (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+head_model: focal_joins ~ head_B + head_G + head_R + head_O + head_K + (1 | 
+head_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+face_model: focal_joins ~ face_B + face_O + face_Y + face_W + face_G + (1 | 
+face_model:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+species_model: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + 
+species_model:     WE + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+                    Df    AIC    BIC  logLik deviance   Chisq Chi Df
+macaw_model          6 1933.1 1973.8 -960.54   1921.1               
+largersmaller_model  6 1925.1 1965.8 -956.54   1913.1  7.9907      0
+simdifsize_model     6 1963.2 2004.0 -975.60   1951.2  0.0000      0
+size_model           7 1913.3 1960.8 -949.65   1899.3 51.8932      1
+back_model           7 1933.7 1981.2 -959.85   1919.7  0.0000      0
+clade_model          9 1894.7 1955.8 -938.36   1876.7 42.9735      2
+head_model           9 1926.7 1987.8 -954.34   1908.7  0.0000      0
+face_model           9 1921.1 1982.2 -951.54   1903.1  5.5901      0
+species_model       15 1924.4 2026.3 -947.21   1894.4  8.6597      6
+                               Pr(>Chisq)    
+macaw_model                                  
+largersmaller_model < 0.00000000000000022 ***
+simdifsize_model                   1.0000    
+size_model              0.000000000000586 ***
+back_model                         1.0000    
+clade_model             0.000000000466044 ***
+head_model                         1.0000    
+face_model          < 0.00000000000000022 ***
+species_model                      0.1936    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                model param   loglike      AIC    delta
+6         clade_model     9 -938.3600 1894.720  0.00000
+4          size_model     7 -949.6500 1913.300 18.58009
+8          face_model     9 -951.5421 1921.084 26.36426
+9       species_model    15 -947.2122 1924.424 29.70456
+2 largersmaller_model     6 -956.5419 1925.084 30.36384
+7          head_model     9 -954.3371 1926.674 31.95432
+1         macaw_model     6 -960.5372 1933.074 38.35454
+5          back_model     7 -959.8467 1933.693 38.97348
+3    simdifsize_model     6 -975.5966 1963.193 68.47332
+                   weight
+6 0.999905053464182902445
+4 0.000092329929350848627
+8 0.000001883786739729878
+9 0.000000354563987640914
+2 0.000000254996279489097
+7 0.000000115123972981220
+1 0.000000004692186354830
+5 0.000000003443298615344
+3 0.000000000000001352587
+[1] 
+[1] YCPA >>> BEST FIT MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+focal_joins ~ clade_SP + clade_LP + clade_K + clade_SM + clade_LM +  
+    (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1894.7   1955.9   -938.4   1876.7     6577 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.5401 -0.2157 -0.1261 -0.1051 10.8133 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.0000   0.0000  
+ Xhr.dectime (Intercept) 0.1073   0.3276  
+ Spot        (Intercept) 0.2457   0.4957  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.81950    0.21829 -17.498 < 0.0000000000000002 ***
+clade_SP    -0.15886    0.15120  -1.051             0.293404    
+clade_LP    -0.59217    0.16146  -3.668             0.000245 ***
+clade_K      0.15590    0.19367   0.805             0.420853    
+clade_SM     1.57142    0.15813   9.938 < 0.0000000000000002 ***
+clade_LM     0.09944    0.15119   0.658             0.510723    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+         (Intr) cld_SP cld_LP clad_K cld_SM
+clade_SP -0.107                            
+clade_LP -0.055 -0.240                     
+clade_K  -0.136 -0.107  0.002              
+clade_SM -0.340 -0.029 -0.162  0.008       
+clade_LM -0.096 -0.103 -0.091  0.024 -0.059
+[1] 
+[1] YCPA >>> SPECIES MODEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: focal_joins ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB +  
+    WE + (1 | Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: df
+
+     AIC      BIC   logLik deviance df.resid 
+  1924.4   2026.3   -947.2   1894.4     6571 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-0.6217 -0.2026 -0.1413 -0.1151 10.6304 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.00000  0.0000  
+ Xhr.dectime (Intercept) 0.09587  0.3096  
+ Spot        (Intercept) 0.26795  0.5176  
+Number of obs: 6586, groups:  Rdate, 302; Xhr.dectime, 230; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)  -3.5051     0.2158 -16.241 < 0.0000000000000002 ***
+BH            0.1183     0.1932   0.612             0.540208    
+BY            0.1854     0.1680   1.103             0.269823    
+CF            0.6256     0.1622   3.858             0.000114 ***
+DH           -0.4531     0.5240  -0.865             0.387268    
+ME           -0.5724     0.1632  -3.507             0.000453 ***
+OC           -0.2520     0.2074  -1.215             0.224397    
+RB            0.9005     0.1636   5.506         0.0000000367 ***
+RG           -0.5320     0.4433  -1.200             0.230110    
+SC           -0.1586     0.2063  -0.769             0.441990    
+WB           -0.4289     0.3241  -1.323             0.185775    
+WE            0.1612     0.1990   0.810             0.417866    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG     SC    
+BH  0.002                                                               
+BY -0.060 -0.100                                                        
+CF -0.127 -0.092 -0.076                                                 
+DH -0.082  0.030  0.014  0.012                                          
+ME -0.110 -0.172 -0.017 -0.110  0.020                                   
+OC -0.031 -0.420 -0.072  0.024 -0.056 -0.124                            
+RB -0.116 -0.069 -0.061 -0.379  0.018 -0.038  0.021                     
+RG -0.042  0.063 -0.105  0.034  0.007  0.007  0.010  0.068              
+SC -0.031 -0.034 -0.307 -0.015 -0.001 -0.032  0.037  0.020 -0.185       
+WB -0.157 -0.004  0.024  0.038 -0.040  0.041 -0.014  0.050  0.019  0.013
+WE -0.098 -0.083  0.024 -0.018 -0.049 -0.011 -0.020 -0.010  0.003  0.016
+   WB    
+BH       
+BY       
+CF       
+DH       
+ME       
+OC       
+RB       
+RG       
+SC       
+WB       
+WE  0.020

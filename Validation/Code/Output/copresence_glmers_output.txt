@@ -1,0 +1,2834 @@
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS BH
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  5040.9   5145.0  -2505.4   5010.9     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.7610 -0.3426 -0.1605  0.1325 10.8127 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.7589   0.8712  
+ Xhr.dectime (Intercept) 0.2695   0.5192  
+ Spot        (Intercept) 0.4656   0.6823  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.46792    0.24865 -13.947 < 0.0000000000000002 ***
+BY           0.65683    0.09412   6.978     0.00000000000299 ***
+CF           0.38702    0.09289   4.166     0.00003094147435 ***
+DH          -0.18638    0.15972  -1.167             0.243224    
+ME           1.20400    0.09430  12.768 < 0.0000000000000002 ***
+OC           2.17924    0.08929  24.406 < 0.0000000000000002 ***
+RB           0.54125    0.09453   5.725     0.00000001031691 ***
+RG          -0.40333    0.16350  -2.467             0.013630 *  
+SC           0.09962    0.10164   0.980             0.327020    
+WB          -0.49486    0.14826  -3.338             0.000844 ***
+WE           0.42253    0.10938   3.863             0.000112 ***
+YC           0.57944    0.12138   4.774     0.00000180971026 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BY     CF     DH     ME     OC     RB     RG     SC    
+BY -0.083                                                        
+CF -0.093 -0.063                                                 
+DH -0.077  0.046 -0.007                                          
+ME -0.154 -0.064 -0.084  0.097                                   
+OC -0.107 -0.001  0.032 -0.172 -0.091                            
+RB -0.071  0.000 -0.276  0.037 -0.019  0.066                     
+RG -0.021 -0.141  0.026  0.002  0.023 -0.006  0.072              
+SC -0.030 -0.324 -0.044  0.025 -0.047  0.044 -0.002 -0.189       
+WB -0.094  0.061  0.016 -0.098  0.086  0.014  0.056  0.013  0.024
+WE -0.088  0.048 -0.019 -0.026  0.032 -0.043 -0.021  0.017  0.018
+YC -0.061 -0.051 -0.146  0.024  0.123  0.028 -0.061  0.034  0.031
+   WB     WE    
+BY              
+CF              
+DH              
+ME              
+OC              
+RB              
+RG              
+SC              
+WB              
+WE -0.035       
+YC  0.040  0.023
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: BH ~ CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5090.7 5187.9 -2531.3   5062.7              
+full    15 5040.9 5145.0 -2505.4   5010.9 51.812      1
+                Pr(>Chisq)    
+reduced                       
+full    0.0000000000006106 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.656826197532813
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: BH ~ BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5056.7 5153.9 -2514.3   5028.7                         
+full    15 5040.9 5145.0 -2505.4   5010.9 17.815      1 0.00002435
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.387022799085272
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5040.5 5137.7 -2506.2   5012.5                         
+full    15 5040.9 5145.0 -2505.4   5010.9 1.6358      1     0.2009
+[1] Estimate: -0.186384112101595
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5204.9 5302.2 -2588.5   5176.9              
+full    15 5040.9 5145.0 -2505.4   5010.9 166.07      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.20399591863972
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5705.9 5803.1 -2838.9   5677.9              
+full    15 5040.9 5145.0 -2505.4   5010.9 667.05      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 2.17924426903078
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df
+reduced 14 5071.9 5169.1 -2521.9   5043.9             
+full    15 5040.9 5145.0 -2505.4   5010.9 33.04      1
+            Pr(>Chisq)    
+reduced                   
+full    0.000000009028 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.541250978013315
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df Pr(>Chisq)   
+reduced 14 5045.6 5142.8 -2508.8   5017.6                           
+full    15 5040.9 5145.0 -2505.4   5010.9 6.751      1   0.009369 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.403326463029095
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5039.9 5137.1 -2505.9   5011.9                         
+full    15 5040.9 5145.0 -2505.4   5010.9 1.0047      1     0.3162
+[1] Estimate: 0.0996197460535003
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5050.4 5147.6 -2511.2   5022.4                         
+full    15 5040.9 5145.0 -2505.4   5010.9 11.563      1  0.0006727
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.494858408600805
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5054.6 5151.8 -2513.3   5026.6                         
+full    15 5040.9 5145.0 -2505.4   5010.9 15.751      1 0.00007224
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.42253295334787
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BH ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df   Pr(>Chisq)
+reduced 14 5063.1 5160.4 -2517.6   5035.1                           
+full    15 5040.9 5145.0 -2505.4   5010.9 24.296      1 0.0000008262
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.57944128912627
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS BY
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  5909.3   6013.5  -2939.7   5879.3     7658 
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-11.3555  -0.4064  -0.1761   0.3218  16.0502 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.04087  1.0202  
+ Xhr.dectime (Intercept) 0.01911  0.1382  
+ Spot        (Intercept) 0.36361  0.6030  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.04036    0.21819  -9.351 < 0.0000000000000002 ***
+BH           0.70779    0.09393   7.536   0.0000000000000486 ***
+CF           0.42733    0.08296   5.151   0.0000002593914053 ***
+DH          -1.19745    0.19383  -6.178   0.0000000006503650 ***
+ME           0.39628    0.08749   4.529   0.0000059169730922 ***
+OC           0.23376    0.09630   2.427              0.01521 *  
+RB           0.08514    0.08492   1.003              0.31604    
+RG           2.07477    0.17139  12.105 < 0.0000000000000002 ***
+SC           1.90181    0.08657  21.968 < 0.0000000000000002 ***
+WB          -1.25646    0.13476  -9.324 < 0.0000000000000002 ***
+WE          -0.55553    0.10111  -5.494   0.0000000392889082 ***
+YC           0.31347    0.11132   2.816              0.00486 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     CF     DH     ME     OC     RB     RG     SC    
+BH -0.025                                                        
+CF -0.103 -0.054                                                 
+DH -0.040  0.010 -0.008                                          
+ME -0.122 -0.203 -0.065  0.049                                   
+OC -0.046 -0.408  0.033 -0.112 -0.166                            
+RB -0.063 -0.053 -0.299  0.012  0.005  0.049                     
+RG -0.086  0.029  0.065  0.015  0.082  0.026  0.088              
+SC -0.092  0.021 -0.028  0.026 -0.029  0.040  0.018 -0.106       
+WB -0.094  0.010  0.034 -0.024  0.056  0.015  0.057  0.072  0.054
+WE -0.065 -0.070 -0.026  0.001  0.010 -0.043 -0.012  0.055  0.017
+YC -0.054 -0.056 -0.164  0.015  0.111  0.017 -0.085  0.041  0.028
+   WB     WE    
+BH              
+CF              
+DH              
+ME              
+OC              
+RB              
+RG              
+SC              
+WB              
+WE  0.047       
+YC  0.035  0.016
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: BY ~ CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5967.3 6064.5 -2969.6   5939.3              
+full    15 5909.3 6013.5 -2939.7   5879.3 59.911      1
+                  Pr(>Chisq)    
+reduced                         
+full    0.000000000000009926 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.707792634334797
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: BY ~ BH + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df   Pr(>Chisq)
+reduced 14 5934.2 6031.5 -2953.1   5906.2                           
+full    15 5909.3 6013.5 -2939.7   5879.3 26.904      1 0.0000002139
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.427331724980639
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5955.3 6052.6 -2963.7   5927.3              
+full    15 5909.3 6013.5 -2939.7   5879.3 47.989      1
+               Pr(>Chisq)    
+reduced                      
+full    0.000000000004286 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.19745283467558
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df  Pr(>Chisq)
+reduced 14 5928.9 6026.2 -2950.5   5900.9                          
+full    15 5909.3 6013.5 -2939.7   5879.3 21.594      1 0.000003369
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.396278817426119
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df Pr(>Chisq)  
+reduced 14 5913.5 6010.8 -2942.8   5885.5                          
+full    15 5909.3 6013.5 -2939.7   5879.3  6.18      1    0.01292 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.233759975184715
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5908.4 6005.6 -2940.2   5880.4                         
+full    15 5909.3 6013.5 -2939.7   5879.3 1.0527      1     0.3049
+[1] Estimate: 0.0851429389776987
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6092.2 6189.4 -3032.1   6064.2              
+full    15 5909.3 6013.5 -2939.7   5879.3 184.83      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 2.07476653175366
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6466.4 6563.6 -3219.2   6438.4              
+full    15 5909.3 6013.5 -2939.7   5879.3 559.07      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.90181308047767
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6007.6 6104.9 -2989.8   5979.6              
+full    15 5909.3 6013.5 -2939.7   5879.3 100.29      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.2564591764011
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5939.2 6036.5 -2955.6   5911.2              
+full    15 5909.3 6013.5 -2939.7   5879.3 31.893      1
+           Pr(>Chisq)    
+reduced                  
+full    0.00000001629 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.555525967931314
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: BY ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5915.9 6013.2 -2944.0   5887.9                         
+full    15 5909.3 6013.5 -2939.7   5879.3 8.5785      1   0.003402
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.313470521557079
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS CF
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  6882.4   6986.6  -3426.2   6852.4     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.6171 -0.4461 -0.2135  0.4426  9.7317 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.9803   0.9901  
+ Xhr.dectime (Intercept) 1.6449   1.2826  
+ Spot        (Intercept) 0.2690   0.5186  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.10270    0.21516  -9.773 < 0.0000000000000002 ***
+BH           0.41275    0.09560   4.317    0.000015789554237 ***
+BY           0.41219    0.08659   4.760    0.000001932114871 ***
+DH           0.03782    0.13053   0.290              0.77205    
+ME           0.64849    0.08874   7.308    0.000000000000272 ***
+OC           0.06539    0.09273   0.705              0.48073    
+RB           1.10513    0.07946  13.908 < 0.0000000000000002 ***
+RG          -0.05853    0.15000  -0.390              0.69639    
+SC           0.28466    0.09216   3.089              0.00201 ** 
+WB          -0.62725    0.10847  -5.783    0.000000007345052 ***
+WE           0.03282    0.09139   0.359              0.71951    
+YC           0.98394    0.11472   8.577 < 0.0000000000000002 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     DH     ME     OC     RB     RG     SC    
+BH  0.001                                                        
+BY -0.086 -0.113                                                 
+DH -0.081  0.028  0.038                                          
+ME -0.097 -0.171 -0.062  0.089                                   
+OC -0.028 -0.376 -0.041 -0.117 -0.117                            
+RB -0.071 -0.092 -0.001  0.016 -0.008  0.022                     
+RG -0.053  0.032 -0.132  0.010  0.019 -0.003  0.048              
+SC -0.041 -0.025 -0.321  0.042 -0.037  0.029  0.023 -0.198       
+WB -0.099  0.011  0.060 -0.038  0.087  0.020  0.063  0.019  0.043
+WE -0.079 -0.051  0.064  0.000  0.037 -0.041 -0.017  0.016  0.020
+YC -0.062 -0.063 -0.037  0.010  0.083  0.008  0.000  0.025  0.019
+   WB     WE    
+BH              
+BY              
+DH              
+ME              
+OC              
+RB              
+RG              
+SC              
+WB              
+WE  0.033       
+YC  0.047  0.025
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: CF ~ BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df  Pr(>Chisq)
+reduced 14 6900.2 6997.4 -3436.1   6872.2                          
+full    15 6882.4 6986.6 -3426.2   6852.4 19.771      1 0.000008729
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.412753884347947
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: CF ~ BH + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df  Pr(>Chisq)
+reduced 14 6903.0 7000.2 -3437.5   6875.0                          
+full    15 6882.4 6986.6 -3426.2   6852.4 22.544      1 0.000002054
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.412188086220202
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6880.5 6977.7 -3426.2   6852.5                         
+full    15 6882.4 6986.6 -3426.2   6852.4 0.0625      1     0.8026
+[1] Estimate: 0.0378150256176605
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6938.4 7035.7 -3455.2   6910.4              
+full    15 6882.4 6986.6 -3426.2   6852.4 58.007      1
+                 Pr(>Chisq)    
+reduced                        
+full    0.00000000000002612 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.648490958194816
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6880.9 6978.1 -3426.4   6852.9                         
+full    15 6882.4 6986.6 -3426.2   6852.4 0.4385      1     0.5078
+[1] Estimate: 0.065389946870014
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 7084.8 7182.0 -3528.4   7056.8              
+full    15 6882.4 6986.6 -3426.2   6852.4 204.36      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.10513144565587
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6880.8 6978.0 -3426.4   6852.8                         
+full    15 6882.4 6986.6 -3426.2   6852.4 0.3761      1     0.5397
+[1] Estimate: -0.0585289452613275
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6890.5 6987.7 -3431.2   6862.5                         
+full    15 6882.4 6986.6 -3426.2   6852.4 10.025      1   0.001544
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.28465632085184
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6916.3 7013.6 -3444.2   6888.3              
+full    15 6882.4 6986.6 -3426.2   6852.4 35.899      1
+            Pr(>Chisq)    
+reduced                   
+full    0.000000002078 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.627249092999195
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6880.6 6977.8 -3426.3   6852.6                         
+full    15 6882.4 6986.6 -3426.2   6852.4 0.1341      1     0.7142
+[1] Estimate: 0.0328175473501211
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: CF ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6963.1 7060.4 -3467.6   6935.1              
+full    15 6882.4 6986.6 -3426.2   6852.4 82.687      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.983939224465277
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS DH
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  4075.3   4179.5  -2022.6   4045.3     7658 
+
+Scaled residuals: 
+   Min     1Q Median     3Q    Max 
+-3.315 -0.342 -0.117 -0.046 96.838 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.07326  1.036   
+ Xhr.dectime (Intercept) 0.01488  0.122   
+ Spot        (Intercept) 2.27825  1.509   
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+             Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.603830   0.501727  -5.190          0.000000211 ***
+BH          -0.006619   0.167571  -0.039              0.96849    
+BY          -0.982666   0.195881  -5.017          0.000000526 ***
+CF          -0.192017   0.131110  -1.465              0.14304    
+ME          -0.637962   0.160186  -3.983          0.000068154 ***
+OC           1.517645   0.110721  13.707 < 0.0000000000000002 ***
+RB          -0.424678   0.154062  -2.757              0.00584 ** 
+RG          -0.698991   0.412414  -1.695              0.09010 .  
+SC          -0.964644   0.238718  -4.041          0.000053239 ***
+WB          -0.164380   0.100841  -1.630              0.10308    
+WE          -0.138977   0.101629  -1.367              0.17147    
+YC          -0.860603   0.267218  -3.221              0.00128 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     ME     OC     RB     RG     SC    
+BH -0.050                                                        
+BY -0.031 -0.086                                                 
+CF -0.059  0.013 -0.036                                          
+ME -0.086 -0.143 -0.045 -0.094                                   
+OC -0.057 -0.287  0.005 -0.027 -0.080                            
+RB -0.031 -0.087 -0.019 -0.168 -0.019  0.030                     
+RG -0.016  0.022 -0.173  0.036  0.020  0.033  0.026              
+SC -0.016  0.005 -0.290 -0.032 -0.016  0.006  0.028 -0.111       
+WB -0.085  0.008  0.091  0.070  0.109  0.059  0.091  0.062  0.082
+WE -0.052 -0.016  0.079  0.029  0.032 -0.045  0.003  0.041  0.061
+YC -0.026 -0.039  0.001 -0.114  0.069  0.011 -0.057  0.014  0.041
+   WB     WE    
+BH              
+BY              
+CF              
+ME              
+OC              
+RB              
+RG              
+SC              
+WB              
+WE  0.175       
+YC  0.073  0.048
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: DH ~ BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 4073.3 4170.5 -2022.6   4045.3                         
+full    15 4075.3 4179.5 -2022.6   4045.3 0.0057      1     0.9401
+[1] Estimate: -0.00661893640993028
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: DH ~ BH + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 4103.2 4200.4 -2037.6   4075.2              
+full    15 4075.3 4179.5 -2022.6   4045.3 29.924      1
+           Pr(>Chisq)    
+reduced                  
+full    0.00000004492 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.982665720532161
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + ME + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 4075.6 4172.9 -2023.8   4047.6                         
+full    15 4075.3 4179.5 -2022.6   4045.3 2.3585      1     0.1246
+[1] Estimate: -0.192016938649071
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df Pr(>Chisq)
+reduced 14 4090.9 4188.2 -2031.5   4062.9                        
+full    15 4075.3 4179.5 -2022.6   4045.3 17.66      1 0.00002641
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.637962359852206
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 4275.6 4372.9 -2123.8   4247.6              
+full    15 4075.3 4179.5 -2022.6   4045.3 202.37      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.5176451945877
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 4081.8 4179.0 -2026.9   4053.8                         
+full    15 4075.3 4179.5 -2022.6   4045.3 8.5116      1   0.003529
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.424678446364723
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 4076.6 4173.9 -2024.3   4048.6                           
+full    15 4075.3 4179.5 -2022.6   4045.3 3.3733      1    0.06626 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.698990840086215
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 4092.5 4189.7 -2032.2   4064.5                         
+full    15 4075.3 4179.5 -2022.6   4045.3 19.192      1 0.00001182
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.964644286033087
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 4076.1 4173.4 -2024.1   4048.1                           
+full    15 4075.3 4179.5 -2022.6   4045.3 2.8475      1    0.09152 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.164379984114929
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 4075.2 4172.4 -2023.6   4047.2                         
+full    15 4075.3 4179.5 -2022.6   4045.3 1.9257      1     0.1652
+[1] Estimate: -0.138977211625733
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: DH ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 4085.9 4183.2 -2029.0   4057.9                         
+full    15 4075.3 4179.5 -2022.6   4045.3 12.656      1  0.0003743
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.860602942654565
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS ME
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  5751.8   5856.0  -2860.9   5721.8     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-7.0756 -0.3324 -0.1215  0.3097 17.1036 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 2.617    1.618   
+ Xhr.dectime (Intercept) 1.964    1.402   
+ Spot        (Intercept) 1.388    1.178   
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.39945    0.40160  -5.975     0.00000000230504 ***
+BH           1.05886    0.10482  10.102 < 0.0000000000000002 ***
+BY           0.41047    0.09671   4.244     0.00002194021775 ***
+CF           0.64272    0.09418   6.824     0.00000000000884 ***
+DH          -0.77698    0.16035  -4.846     0.00000126219732 ***
+OC           0.98332    0.10360   9.492 < 0.0000000000000002 ***
+RB           0.32198    0.09837   3.273              0.00106 ** 
+RG          -0.37048    0.16260  -2.278              0.02270 *  
+SC           0.25258    0.10176   2.482              0.01306 *  
+WB          -1.21056    0.13552  -8.933 < 0.0000000000000002 ***
+WE          -0.27004    0.10823  -2.495              0.01259 *  
+YC          -0.64293    0.12677  -5.072     0.00000039442975 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     OC     RB     RG     SC    
+BH -0.007                                                        
+BY -0.055 -0.091                                                 
+CF -0.052 -0.056 -0.058                                          
+DH -0.038  0.036  0.054 -0.023                                   
+OC -0.035 -0.331 -0.028  0.012 -0.163                            
+RB -0.032 -0.080 -0.019 -0.213  0.016  0.018                     
+RG -0.028  0.023 -0.128 -0.005  0.006 -0.001  0.047              
+SC -0.027 -0.011 -0.322 -0.045  0.040  0.038  0.011 -0.182       
+WB -0.052  0.024  0.057  0.019 -0.038  0.011  0.047  0.024  0.046
+WE -0.047 -0.075  0.039 -0.021  0.013 -0.040 -0.032  0.029  0.029
+YC -0.009 -0.094 -0.057 -0.120  0.000 -0.025 -0.032  0.031  0.003
+   WB     WE    
+BH              
+BY              
+CF              
+DH              
+OC              
+RB              
+RG              
+SC              
+WB              
+WE  0.034       
+YC  0.010  0.019
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: ME ~ BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df
+reduced 14 5861.9 5959.1 -2917.0   5833.9             
+full    15 5751.8 5856.0 -2860.9   5721.8 112.1      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.05886260722791
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: ME ~ BH + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5768.9 5866.1 -2870.4   5740.9                         
+full    15 5751.8 5856.0 -2860.9   5721.8 19.054      1 0.00001271
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.410473233467244
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + DH + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5801.8 5899.1 -2886.9   5773.8              
+full    15 5751.8 5856.0 -2860.9   5721.8 52.024      1
+                Pr(>Chisq)    
+reduced                       
+full    0.0000000000005482 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.642718536189717
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + OC + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df   Pr(>Chisq)
+reduced 14 5777.5 5874.7 -2874.7   5749.5                           
+full    15 5751.8 5856.0 -2860.9   5721.8 27.673      1 0.0000001436
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.776975919842111
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5846.2 5943.4 -2909.1   5818.2              
+full    15 5751.8 5856.0 -2860.9   5721.8 96.395      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.983318445192195
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5761.6 5858.9 -2866.8   5733.6                         
+full    15 5751.8 5856.0 -2860.9   5721.8 11.807      1  0.0005902
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.321976632801236
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5756.5 5853.7 -2864.2   5728.5                         
+full    15 5751.8 5856.0 -2860.9   5721.8 6.6674      1   0.009819
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.370480760804423
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df Pr(>Chisq)   
+reduced 14 5756.6 5853.8 -2864.3   5728.6                           
+full    15 5751.8 5856.0 -2860.9   5721.8 6.754      1   0.009354 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.252582375668322
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5842.1 5939.3 -2907.0   5814.1              
+full    15 5751.8 5856.0 -2860.9   5721.8 92.247      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.21055733095362
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 5756.3 5853.5 -2864.1   5728.3                           
+full    15 5751.8 5856.0 -2860.9   5721.8 6.4401      1    0.01116 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.270035015695526
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: ME ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df   Pr(>Chisq)
+reduced 14 5778.1 5875.4 -2875.1   5750.1                           
+full    15 5751.8 5856.0 -2860.9   5721.8 28.302      1 0.0000001038
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.642932369491401
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS OC
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  6040.0   6144.2  -3005.0   6010.0     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.1355 -0.3830 -0.2309 -0.0709  8.2735 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.1856   1.0888  
+ Xhr.dectime (Intercept) 0.2004   0.4477  
+ Spot        (Intercept) 0.2218   0.4709  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.84969    0.19174 -14.862 < 0.0000000000000002 ***
+BH           2.24691    0.09053  24.820 < 0.0000000000000002 ***
+BY           0.19383    0.09657   2.007             0.044730 *  
+CF           0.02889    0.09055   0.319             0.749642    
+DH           1.56214    0.10785  14.484 < 0.0000000000000002 ***
+ME           1.00074    0.09378  10.671 < 0.0000000000000002 ***
+RB          -0.20441    0.09528  -2.145             0.031931 *  
+RG          -0.18028    0.16135  -1.117             0.263841    
+SC          -0.23302    0.10267  -2.270             0.023238 *  
+WB          -0.35802    0.10801  -3.315             0.000918 ***
+WE           0.38966    0.09144   4.261            0.0000203 ***
+YC           0.03480    0.12138   0.287             0.774361    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     RB     RG     SC    
+BH -0.086                                                        
+BY -0.087 -0.094                                                 
+CF -0.091 -0.071 -0.067                                          
+DH -0.157  0.053  0.054  0.007                                   
+ME -0.177 -0.160 -0.089 -0.060  0.093                            
+RB -0.058 -0.122 -0.013 -0.269  0.040  0.008                     
+RG -0.028  0.028 -0.121  0.024  0.021  0.006  0.076              
+SC -0.018 -0.040 -0.313 -0.043  0.026 -0.046 -0.003 -0.207       
+WB -0.120  0.030  0.069  0.010 -0.063  0.073  0.047  0.030  0.025
+WE -0.118 -0.037  0.064 -0.016  0.026  0.047 -0.019  0.020  0.014
+YC -0.051 -0.074 -0.050 -0.137  0.014  0.117 -0.080  0.031  0.013
+   WB     WE    
+BH              
+BY              
+CF              
+DH              
+ME              
+RB              
+RG              
+SC              
+WB              
+WE  0.024       
+YC  0.026  0.027
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: OC ~ BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df
+reduced 14 6734.1 6831.4 -3353.1   6706.1             
+full    15 6040.0 6144.2 -3005.0   6010.0 696.1      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 2.2469076887531
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: OC ~ BH + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 6042.3 6139.6 -3007.2   6014.3                           
+full    15 6040.0 6144.2 -3005.0   6010.0 4.2958      1    0.03821 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.193829836651432
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + DH + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6038.1 6135.3 -3005.1   6010.1                         
+full    15 6040.0 6144.2 -3005.0   6010.0 0.0482      1     0.8263
+[1] Estimate: 0.0288944815443693
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + ME + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6259.4 6356.7 -3115.7   6231.4              
+full    15 6040.0 6144.2 -3005.0   6010.0 221.39      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.56213555665141
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + RB + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df  AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6151 6248.2 -3061.5     6123              
+full    15 6040 6144.2 -3005.0     6010 112.91      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.00074418573643
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + ME + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df  AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 6043 6140.2 -3007.5     6015                           
+full    15 6040 6144.2 -3005.0     6010 4.9539      1    0.02603 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.204408035082318
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + ME + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6039.4 6136.6 -3005.7   6011.4                         
+full    15 6040.0 6144.2 -3005.0   6010.0 1.3563      1     0.2442
+[1] Estimate: -0.180282893629078
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + ME + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 6043.5 6140.7 -3007.7   6015.5                           
+full    15 6040.0 6144.2 -3005.0   6010.0 5.4356      1    0.01973 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.23301658200856
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6049.2 6146.4 -3010.6   6021.2                         
+full    15 6040.0 6144.2 -3005.0   6010.0 11.143      1  0.0008436
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.358018033436949
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6057.2 6154.4 -3014.6   6029.2                         
+full    15 6040.0 6144.2 -3005.0   6010.0 19.161      1 0.00001201
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.389659451445634
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: OC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6038.1 6135.4 -3005.1   6010.1                         
+full    15 6040.0 6144.2 -3005.0   6010.0 0.0766      1     0.7819
+[1] Estimate: 0.0347972633484333
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS RB
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  6319.0   6423.2  -3144.5   6289.0     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.4131 -0.4090 -0.1803  0.3799 13.3887 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.2192   1.1042  
+ Xhr.dectime (Intercept) 1.4392   1.1997  
+ Spot        (Intercept) 0.8138   0.9021  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.70492    0.31958  -8.464 < 0.0000000000000002 ***
+BH           0.61646    0.09849   6.259      0.0000000003876 ***
+BY          -0.01036    0.09047  -0.115              0.90880    
+CF           1.14522    0.08046  14.233 < 0.0000000000000002 ***
+DH          -0.25974    0.15378  -1.689              0.09122 .  
+ME           0.29528    0.09424   3.133              0.00173 ** 
+OC          -0.12730    0.09831  -1.295              0.19537    
+RG          -0.59242    0.16034  -3.695              0.00022 ***
+SC          -0.04870    0.09434  -0.516              0.60572    
+WB          -0.80468    0.12373  -6.503      0.0000000000785 ***
+WE           0.11027    0.09826   1.122              0.26179    
+YC           0.35239    0.11429   3.083              0.00205 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RG     SC    
+BH -0.007                                                        
+BY -0.038 -0.117                                                 
+CF -0.085 -0.056 -0.071                                          
+DH -0.053  0.021  0.036 -0.005                                   
+ME -0.065 -0.145 -0.090 -0.092  0.064                            
+OC -0.016 -0.380 -0.046 -0.004 -0.100 -0.122                     
+RG -0.026  0.029 -0.117 -0.008  0.004  0.022 -0.006              
+SC -0.017 -0.019 -0.303 -0.051  0.023 -0.057  0.034 -0.180       
+WB -0.060  0.014  0.042  0.037 -0.060  0.066  0.030  0.013  0.029
+WE -0.054 -0.055  0.055 -0.002  0.006  0.034 -0.029  0.013  0.017
+YC -0.034 -0.055 -0.044 -0.104  0.009  0.062  0.001  0.010  0.011
+   WB     WE    
+BH              
+BY              
+CF              
+DH              
+ME              
+OC              
+RG              
+SC              
+WB              
+WE  0.053       
+YC  0.033  0.018
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: RB ~ BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6359.2 6456.4 -3165.6   6331.2              
+full    15 6319.0 6423.2 -3144.5   6289.0 42.203      1
+              Pr(>Chisq)    
+reduced                     
+full    0.00000000008228 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.616464876622575
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: RB ~ BH + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df  AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6317 6414.3 -3144.5     6289                         
+full    15 6319 6423.2 -3144.5     6289 0.0411      1     0.8393
+[1] Estimate: -0.0103637260111073
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + DH + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6532.3 6629.6 -3252.2   6504.3              
+full    15 6319.0 6423.2 -3144.5   6289.0 215.36      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.14521804146997
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + ME + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 6320.3 6417.6 -3146.2   6292.3                           
+full    15 6319.0 6423.2 -3144.5   6289.0 3.3439      1    0.06745 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.259742564039488
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + OC + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6327.8 6425.0 -3149.9   6299.8                         
+full    15 6319.0 6423.2 -3144.5   6289.0 10.824      1   0.001002
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.295284020031071
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + ME + RG + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6318.9 6416.1 -3145.4   6290.9                         
+full    15 6319.0 6423.2 -3144.5   6289.0 1.8989      1     0.1682
+[1] Estimate: -0.127298897318483
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + ME + OC + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df Pr(>Chisq)
+reduced 14 6333.8 6431.1 -3152.9   6305.8                        
+full    15 6319.0 6423.2 -3144.5   6289.0 16.85      1 0.00004046
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.592417939300307
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + ME + OC + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6317.3 6414.6 -3144.7   6289.3                         
+full    15 6319.0 6423.2 -3144.5   6289.0 0.3526      1     0.5527
+[1] Estimate: -0.0486994238478264
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6364.1 6461.3 -3168.0   6336.1              
+full    15 6319.0 6423.2 -3144.5   6289.0 47.087      1
+               Pr(>Chisq)    
+reduced                      
+full    0.000000000006791 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.804682459753287
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6318.3 6415.6 -3145.2   6290.3                         
+full    15 6319.0 6423.2 -3144.5   6289.0 1.3527      1     0.2448
+[1] Estimate: 0.110265386426647
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RB ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6327.5 6424.8 -3149.8   6299.5                         
+full    15 6319.0 6423.2 -3144.5   6289.0 10.566      1   0.001152
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.352393852619245
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS RG
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  2343.3   2447.5  -1156.6   2313.3     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.7445 -0.1656 -0.0792 -0.0441 17.1955 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.6287   1.2762  
+ Xhr.dectime (Intercept) 0.1290   0.3592  
+ Spot        (Intercept) 0.2226   0.4718  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -4.26322    0.24994 -17.057 < 0.0000000000000002 ***
+BH          -0.05762    0.17358  -0.332              0.73992    
+BY           1.90398    0.16970  11.220 < 0.0000000000000002 ***
+CF          -0.27477    0.15157  -1.813              0.06986 .  
+DH          -0.51831    0.39700  -1.306              0.19171    
+ME          -0.34975    0.15505  -2.256              0.02409 *  
+OC          -0.06120    0.17327  -0.353              0.72395    
+RB          -0.86513    0.16225  -5.332         0.0000000971 ***
+SC           1.52582    0.13599  11.220 < 0.0000000000000002 ***
+WB          -1.73585    0.37080  -4.681         0.0000028490 ***
+WE          -0.57107    0.20363  -2.804              0.00504 ** 
+YC          -0.57588    0.21903  -2.629              0.00856 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     SC    
+BH -0.001                                                        
+BY -0.411 -0.043                                                 
+CF -0.056 -0.105 -0.044                                          
+DH -0.145  0.023  0.116 -0.014                                   
+ME -0.106 -0.240 -0.048 -0.081  0.052                            
+OC -0.025 -0.430 -0.031  0.015 -0.103 -0.192                     
+RB -0.015 -0.036 -0.030 -0.385  0.010 -0.031  0.059              
+SC -0.184 -0.017 -0.214 -0.062  0.076 -0.025  0.033 -0.010       
+WB -0.125 -0.010  0.110 -0.005 -0.040  0.021  0.016  0.012  0.049
+WE -0.118 -0.057  0.092 -0.030 -0.041  0.001 -0.040 -0.046  0.017
+YC -0.020 -0.090 -0.026 -0.091  0.003  0.090  0.012 -0.112 -0.022
+   WB     WE    
+BH              
+BY              
+CF              
+DH              
+ME              
+OC              
+RB              
+SC              
+WB              
+WE  0.015       
+YC  0.005 -0.008
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: RG ~ BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 2341.4 2438.7 -1156.7   2313.4                         
+full    15 2343.3 2447.5 -1156.6   2313.3 0.1607      1     0.6885
+[1] Estimate: -0.0576194159651361
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: RG ~ BH + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 2491.7 2589.0 -1231.9   2463.7              
+full    15 2343.3 2447.5 -1156.6   2313.3 150.45      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.90398134715941
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + DH + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 2344.9 2442.2 -1158.5   2316.9                           
+full    15 2343.3 2447.5 -1156.6   2313.3 3.6574      1    0.05582 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.274774325671576
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + ME + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 2343.2 2440.5 -1157.6   2315.2                         
+full    15 2343.3 2447.5 -1156.6   2313.3 1.9715      1     0.1603
+[1] Estimate: -0.518305889883077
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + OC + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 2346.5 2443.8 -1159.2   2318.5                           
+full    15 2343.3 2447.5 -1156.6   2313.3 5.2296      1    0.02221 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.349745808575469
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + ME + RB + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 2341.4 2438.6 -1156.7   2313.4                         
+full    15 2343.3 2447.5 -1156.6   2313.3 0.1066      1     0.7441
+[1] Estimate: -0.0611983139053269
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + ME + OC + SC + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df   Pr(>Chisq)
+reduced 14 2368.7 2466.0 -1170.4   2340.7                           
+full    15 2343.3 2447.5 -1156.6   2313.3 27.454      1 0.0000001608
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.865125271399582
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + ME + OC + RB + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 2487.6 2584.8 -1229.8   2459.6              
+full    15 2343.3 2447.5 -1156.6   2313.3 146.34      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.52581540401504
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 2372.7 2469.9 -1172.3   2344.7              
+full    15 2343.3 2447.5 -1156.6   2313.3 31.379      1
+           Pr(>Chisq)    
+reduced                  
+full    0.00000002123 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.73584664465059
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 2349.9 2447.2 -1161.0   2321.9                         
+full    15 2343.3 2447.5 -1156.6   2313.3 8.6753      1   0.003226
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.571072386607625
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: RG ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 2349.1 2446.4 -1160.6   2321.1                         
+full    15 2343.3 2447.5 -1156.6   2313.3 7.8471      1    0.00509
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.57588055093021
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS SC
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  5314.7   5418.9  -2642.4   5284.7     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.6642 -0.3543 -0.1876 -0.0913 15.8284 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 0.6192   0.7869  
+ Xhr.dectime (Intercept) 0.0000   0.0000  
+ Spot        (Intercept) 0.1073   0.3275  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -2.67243    0.14889 -17.949 < 0.0000000000000002 ***
+BH           0.08771    0.10018   0.876             0.381285    
+BY           1.91630    0.08427  22.741 < 0.0000000000000002 ***
+CF           0.33330    0.08706   3.828             0.000129 ***
+DH          -0.95774    0.22383  -4.279     0.00001879169232 ***
+ME           0.32275    0.08990   3.590             0.000330 ***
+OC          -0.21326    0.10111  -2.109             0.034935 *  
+RB          -0.07915    0.08898  -0.890             0.373727    
+RG           1.56173    0.13125  11.899 < 0.0000000000000002 ***
+WB          -1.15900    0.16364  -7.082     0.00000000000142 ***
+WE          -0.32965    0.10639  -3.098             0.001946 ** 
+YC          -0.12833    0.11417  -1.124             0.260976    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG    
+BH  0.006                                                        
+BY -0.256 -0.112                                                 
+CF -0.139 -0.069 -0.034                                          
+DH -0.095  0.007  0.073 -0.005                                   
+ME -0.192 -0.226 -0.024 -0.081  0.051                            
+OC -0.028 -0.416 -0.045  0.025 -0.090 -0.169                     
+RB -0.076 -0.049 -0.024 -0.340  0.022 -0.006  0.048              
+RG -0.098  0.027 -0.139  0.067  0.007  0.064  0.009  0.097       
+WB -0.147 -0.008  0.100  0.019 -0.047  0.051  0.005  0.057  0.052
+WE -0.121 -0.058  0.069 -0.028 -0.007  0.007 -0.043 -0.017  0.042
+YC -0.047 -0.076 -0.048 -0.151  0.007  0.116  0.021 -0.097  0.041
+   WB     WE    
+BH              
+BY              
+CF              
+DH              
+ME              
+OC              
+RB              
+RG              
+WB              
+WE  0.012       
+YC  0.011  0.013
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: SC ~ BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5313.5 5410.7 -2642.8   5285.5                         
+full    15 5314.7 5418.9 -2642.4   5284.7 0.7861      1     0.3753
+[1] Estimate: 0.0877091895464467
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: SC ~ BH + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5899.7 5997.0 -2935.9   5871.7              
+full    15 5314.7 5418.9 -2642.4   5284.7 587.03      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.91629741387279
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + DH + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5327.8 5425.0 -2649.9   5299.8                         
+full    15 5314.7 5418.9 -2642.4   5284.7 15.049      1  0.0001048
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.333295813654731
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + ME + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df  Pr(>Chisq)
+reduced 14 5334.7 5432.0 -2653.4   5306.7                          
+full    15 5314.7 5418.9 -2642.4   5284.7 22.008      1 0.000002715
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.957735206213043
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + OC + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5326.3 5423.6 -2649.2   5298.3                         
+full    15 5314.7 5418.9 -2642.4   5284.7 13.631      1  0.0002225
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.322752708164706
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + ME + RB + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 5317.5 5414.7 -2644.7   5289.5                           
+full    15 5314.7 5418.9 -2642.4   5284.7 4.7384      1     0.0295 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.21325683984186
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + ME + OC + RG + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5313.6 5410.8 -2642.8   5285.6                         
+full    15 5314.7 5418.9 -2642.4   5284.7 0.8422      1     0.3588
+[1] Estimate: -0.079153157675483
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + ME + OC + RB + WB + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5474.0 5571.2 -2723.0   5446.0              
+full    15 5314.7 5418.9 -2642.4   5284.7 161.25      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.56172753525524
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5371.6 5468.9 -2671.8   5343.6              
+full    15 5314.7 5418.9 -2642.4   5284.7 58.933      1
+                 Pr(>Chisq)    
+reduced                        
+full    0.00000000000001632 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.15899722064137
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5322.5 5419.7 -2647.3   5294.5                         
+full    15 5314.7 5418.9 -2642.4   5284.7 9.7998      1   0.001745
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.329648643469944
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: SC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5314.1 5411.3 -2643.0   5286.1                         
+full    15 5314.7 5418.9 -2642.4   5284.7 1.3586      1     0.2438
+[1] Estimate: -0.128333968719669
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS WB
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  5030.0   5134.2  -2500.0   5000.0     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+ -3.373  -0.308  -0.085  -0.004 181.401 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.217958 1.10361 
+ Xhr.dectime (Intercept) 0.004317 0.06571 
+ Spot        (Intercept) 2.234026 1.49467 
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -0.98953    0.48234  -2.052              0.04022 *  
+BH          -0.12121    0.15491  -0.782              0.43395    
+BY          -1.15417    0.14497  -7.961  0.00000000000000170 ***
+CF          -0.61918    0.11025  -5.616  0.00000001950200941 ***
+DH          -0.17615    0.09961  -1.768              0.07699 .  
+ME          -0.97989    0.13492  -7.263  0.00000000000037863 ***
+OC          -0.31747    0.11248  -2.822              0.00477 ** 
+RB          -1.00889    0.12618  -7.995  0.00000000000000129 ***
+RG          -1.98587    0.38203  -5.198  0.00000020128714681 ***
+SC          -1.14638    0.18076  -6.342  0.00000000022701949 ***
+WE          -0.81319    0.09200  -8.839 < 0.0000000000000002 ***
+YC          -1.03774    0.20579  -5.043  0.00000045920954613 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG    
+BH -0.024                                                        
+BY -0.033 -0.053                                                 
+CF -0.043  0.003 -0.043                                          
+DH -0.036  0.027  0.065  0.033                                   
+ME -0.058 -0.177 -0.036 -0.091  0.055                            
+OC -0.018 -0.275  0.018 -0.014 -0.244 -0.080                     
+RB -0.024 -0.050  0.007 -0.137  0.040  0.023  0.042              
+RG -0.006  0.013 -0.144  0.028  0.035  0.013  0.019  0.022       
+SC -0.012  0.003 -0.283 -0.025  0.066 -0.016  0.012  0.033 -0.066
+WE -0.046 -0.031  0.108  0.042  0.055  0.035 -0.031  0.037  0.050
+YC -0.027 -0.025  0.006 -0.104  0.038  0.057  0.012 -0.019  0.015
+   SC     WE    
+BH              
+BY              
+CF              
+DH              
+ME              
+OC              
+RB              
+RG              
+SC              
+WE  0.070       
+YC  0.043  0.053
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: WB ~ BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5028.6 5125.9 -2500.3   5000.6                         
+full    15 5030.0 5134.2 -2500.0   5000.0 0.6273      1     0.4283
+[1] Estimate: -0.121208135063741
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: WB ~ BH + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5099.8 5197.0 -2535.9   5071.8              
+full    15 5030.0 5134.2 -2500.0   5000.0 71.783      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.15417106724628
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + DH + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5062.2 5159.4 -2517.1   5034.2              
+full    15 5030.0 5134.2 -2500.0   5000.0 34.191      1
+            Pr(>Chisq)    
+reduced                   
+full    0.000000004997 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.619178412038165
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + ME + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 5031.3 5128.6 -2501.7   5003.3                           
+full    15 5030.0 5134.2 -2500.0   5000.0 3.3481      1    0.06728 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.176145738020771
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + OC + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance Chisq Chi Df
+reduced 14 5086.7 5183.9 -2529.3   5058.7             
+full    15 5030.0 5134.2 -2500.0   5000.0 58.71      1
+                 Pr(>Chisq)    
+reduced                        
+full    0.00000000000001827 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.979894654042274
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + ME + RB + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 5036.3 5133.5 -2504.1   5008.3                         
+full    15 5030.0 5134.2 -2500.0   5000.0 8.2916      1   0.003983
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.317469121983577
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + ME + OC + RG + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5099.7 5196.9 -2535.8   5071.7              
+full    15 5030.0 5134.2 -2500.0   5000.0 71.704      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.00888509041172
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + ME + OC + RB + SC + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5068.3 5165.5 -2520.1   5040.3              
+full    15 5030.0 5134.2 -2500.0   5000.0 40.259      1
+             Pr(>Chisq)    
+reduced                    
+full    0.0000000002224 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.98586938006495
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + WE + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5074.5 5171.8 -2523.3   5046.5              
+full    15 5030.0 5134.2 -2500.0   5000.0 46.538      1
+               Pr(>Chisq)    
+reduced                      
+full    0.000000000008985 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.14637565806857
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df  AIC    BIC logLik deviance  Chisq Chi Df
+reduced 14 5112 5209.2  -2542     5084              
+full    15 5030 5134.2  -2500     5000 83.971      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.813189334879849
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WB ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 5057.4 5154.7 -2514.7   5029.4              
+full    15 5030.0 5134.2 -2500.0   5000.0 29.448      1
+           Pr(>Chisq)    
+reduced                  
+full    0.00000005744 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -1.0377370775135
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS WE
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  6420.8   6525.0  -3195.4   6390.8     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-6.8693 -0.4248 -0.1931  0.3629 13.8941 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 3.56047  1.8869  
+ Xhr.dectime (Intercept) 0.01986  0.1409  
+ Spot        (Intercept) 2.21900  1.4896  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value       Pr(>|z|)    
+(Intercept) -2.36270    0.48595  -4.862 0.000001162176 ***
+BH           0.72254    0.11351   6.365 0.000000000195 ***
+BY          -0.57227    0.10494  -5.453 0.000000049434 ***
+CF           0.13516    0.09162   1.475       0.140146    
+DH          -0.11605    0.10224  -1.135       0.256356    
+ME          -0.03238    0.10331  -0.313       0.753945    
+OC           0.37298    0.09560   3.901 0.000095676513 ***
+RB           0.16076    0.09712   1.655       0.097846 .  
+RG          -0.75298    0.19670  -3.828       0.000129 ***
+SC          -0.29479    0.11378  -2.591       0.009573 ** 
+WB          -0.60555    0.09066  -6.679 0.000000000024 ***
+YC          -0.22190    0.13603  -1.631       0.102826    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG    
+BH -0.021                                                        
+BY -0.019 -0.124                                                 
+CF -0.051 -0.035 -0.056                                          
+DH -0.029  0.039  0.055  0.007                                   
+ME -0.063 -0.194 -0.085 -0.086  0.045                            
+OC -0.020 -0.340 -0.032 -0.003 -0.188 -0.135                     
+RB -0.028 -0.042 -0.014 -0.257  0.031  0.016  0.025              
+RG -0.011  0.040 -0.139  0.032  0.024  0.021  0.021  0.068       
+SC -0.008 -0.020 -0.331 -0.023  0.034 -0.043  0.011  0.016 -0.178
+WB -0.054 -0.009  0.101  0.054  0.006  0.066  0.031  0.071  0.062
+YC -0.018 -0.044 -0.018 -0.168  0.014  0.085  0.018 -0.086  0.032
+   SC     WB    
+BH              
+BY              
+CF              
+DH              
+ME              
+OC              
+RB              
+RG              
+SC              
+WB  0.045       
+YC -0.011  0.047
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: WE ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6461.5 6558.7 -3216.7   6433.5              
+full    15 6420.8 6525.0 -3195.4   6390.8 42.648      1
+              Pr(>Chisq)    
+reduced                     
+full    0.00000000006552 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.722538003467972
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: WE ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6450.3 6547.6 -3211.2   6422.3              
+full    15 6420.8 6525.0 -3195.4   6390.8 31.542      1
+           Pr(>Chisq)    
+reduced                  
+full    0.00000001952 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.572267095260456
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6420.9 6518.2 -3196.5   6392.9                         
+full    15 6420.8 6525.0 -3195.4   6390.8 2.1439      1     0.1431
+[1] Estimate: 0.135163552852652
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6420.1 6517.4 -3196.1   6392.1                         
+full    15 6420.8 6525.0 -3195.4   6390.8 1.3215      1     0.2503
+[1] Estimate: -0.11604785951996
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6418.9 6516.2 -3195.5   6390.9                         
+full    15 6420.8 6525.0 -3195.4   6390.8 0.1267      1     0.7219
+[1] Estimate: -0.0323829349377914
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6435.1 6532.4 -3203.6   6407.1                         
+full    15 6420.8 6525.0 -3195.4   6390.8 16.332      1 0.00005315
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.372978640917662
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 6421.5 6518.8 -3196.8   6393.5                           
+full    15 6420.8 6525.0 -3195.4   6390.8 2.7225      1    0.09894 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.160764662671086
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 6435.4 6532.6 -3203.7   6407.4                         
+full    15 6420.8 6525.0 -3195.4   6390.8 16.588      1 0.00004644
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.752984406987223
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC  BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)   
+reduced 14 6425.7 6523 -3198.9   6397.7                            
+full    15 6420.8 6525 -3195.4   6390.8 6.9188      1   0.008529 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.294791987333579
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + YC + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 6466.3 6563.5 -3219.1   6438.3              
+full    15 6420.8 6525.0 -3195.4   6390.8 47.485      1
+               Pr(>Chisq)    
+reduced                      
+full    0.000000000005542 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.605552267666147
+[1] ===========================
+[1] === removing species YC ===
+Data: dbb
+Models:
+reduced: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: WE ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + YC + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 6421.7 6518.9 -3196.8   6393.7                           
+full    15 6420.8 6525.0 -3195.4   6390.8 2.8538      1    0.09116 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.221900757700515
+[1] ===========================
+[1] CURRENT FOCAL SPECIES IS YC
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: 
+YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 |  
+    Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+   Data: dbb
+
+     AIC      BIC   logLik deviance df.resid 
+  3840.9   3945.1  -1905.5   3810.9     7658 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.2750 -0.2810 -0.1577 -0.0863 30.4791 
+
+Random effects:
+ Groups      Name        Variance Std.Dev.
+ Rdate       (Intercept) 1.6026   1.2659  
+ Xhr.dectime (Intercept) 0.5305   0.7283  
+ Spot        (Intercept) 0.2151   0.4638  
+Number of obs: 7673, groups:  Rdate, 331; Xhr.dectime, 240; Spot, 11
+
+Fixed effects:
+            Estimate Std. Error z value             Pr(>|z|)    
+(Intercept) -3.16924    0.21275 -14.896 < 0.0000000000000002 ***
+BH           0.52715    0.13024   4.047           0.00005178 ***
+BY           0.32269    0.11630   2.775             0.005527 ** 
+CF           1.11063    0.11407   9.736 < 0.0000000000000002 ***
+DH          -0.51696    0.25586  -2.020             0.043337 *  
+ME          -0.48406    0.11984  -4.039           0.00005367 ***
+OC          -0.09067    0.13064  -0.694             0.487655    
+RB           0.41061    0.11395   3.603             0.000314 ***
+RG          -0.51907    0.21701  -2.392             0.016759 *  
+SC          -0.12401    0.12181  -1.018             0.308667    
+WB          -0.92170    0.19140  -4.816           0.00000147 ***
+WE          -0.28396    0.13697  -2.073             0.038151 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+   (Intr) BH     BY     CF     DH     ME     OC     RB     RG    
+BH -0.022                                                        
+BY -0.087 -0.105                                                 
+CF -0.205 -0.066 -0.060                                          
+DH -0.108  0.010  0.042  0.013                                   
+ME -0.105 -0.168 -0.093 -0.064  0.052                            
+OC -0.029 -0.398 -0.062  0.012 -0.066 -0.152                     
+RB -0.107 -0.048 -0.022 -0.218  0.018 -0.012  0.025              
+RG -0.030  0.032 -0.106  0.000  0.005  0.001 -0.003  0.050       
+SC -0.027 -0.024 -0.331 -0.039  0.015 -0.051  0.035  0.002 -0.164
+WB -0.155  0.021  0.052  0.071 -0.031  0.053  0.006  0.036  0.031
+WE -0.110 -0.063  0.057 -0.004 -0.001  0.011 -0.034 -0.025  0.000
+   SC     WB    
+BH              
+BY              
+CF              
+DH              
+ME              
+OC              
+RB              
+RG              
+SC              
+WB  0.024       
+WE  0.015  0.056
+[1] ===========================
+[1] === removing species BH ===
+Data: dbb
+Models:
+reduced: YC ~ BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3857.1 3954.3 -1914.5   3829.1                         
+full    15 3840.9 3945.1 -1905.5   3810.9 18.188      1 0.00002001
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.527152550754425
+[1] ===========================
+[1] === removing species BY ===
+Data: dbb
+Models:
+reduced: YC ~ BH + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3847.4 3944.7 -1909.7   3819.4                         
+full    15 3840.9 3945.1 -1905.5   3810.9 8.5172      1   0.003518
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.322692749509649
+[1] ===========================
+[1] === removing species CF ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + DH + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df
+reduced 14 3939.1 4036.4 -1955.6   3911.1              
+full    15 3840.9 3945.1 -1905.5   3810.9 100.21      1
+                   Pr(>Chisq)    
+reduced                          
+full    < 0.00000000000000022 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 1.11063318094685
+[1] ===========================
+[1] === removing species DH ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + ME + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 3843.9 3941.1 -1907.9   3815.9                           
+full    15 3840.9 3945.1 -1905.5   3810.9 4.9316      1    0.02637 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.516955159049509
+[1] ===========================
+[1] === removing species ME ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + OC + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3856.8 3954.0 -1914.4   3828.8                         
+full    15 3840.9 3945.1 -1905.5   3810.9 17.871      1 0.00002364
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.484056873175218
+[1] ===========================
+[1] === removing species OC ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + ME + RB + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3839.4 3936.7 -1905.7   3811.4                         
+full    15 3840.9 3945.1 -1905.5   3810.9 0.5191      1     0.4712
+[1] Estimate: -0.0906711479359566
+[1] ===========================
+[1] === removing species RB ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + ME + OC + RG + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3852.7 3950.0 -1912.4   3824.7                         
+full    15 3840.9 3945.1 -1905.5   3810.9 13.826      1  0.0002005
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: 0.410609561304325
+[1] ===========================
+[1] === removing species RG ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + ME + OC + RB + SC + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3845.9 3943.2 -1909.0   3817.9                         
+full    15 3840.9 3945.1 -1905.5   3810.9 7.0045      1    0.00813
+          
+reduced   
+full    **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.51907497395173
+[1] ===========================
+[1] === removing species SC ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + WB + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+reduced 14 3840.1 3937.4 -1906.1   3812.1                         
+full    15 3840.9 3945.1 -1905.5   3810.9 1.2059      1     0.2721
+[1] Estimate: -0.12400791590494
+[1] ===========================
+[1] === removing species WB ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WE + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df   Pr(>Chisq)
+reduced 14 3865.1 3962.3 -1918.5   3837.1                           
+full    15 3840.9 3945.1 -1905.5   3810.9 26.152      1 0.0000003155
+           
+reduced    
+full    ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.92170363310242
+[1] ===========================
+[1] === removing species WE ===
+Data: dbb
+Models:
+reduced: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + (1 | Spot) + 
+reduced:     (1 | Xhr.dectime) + (1 | Rdate)
+full: YC ~ BH + BY + CF + DH + ME + OC + RB + RG + SC + WB + WE + (1 | 
+full:     Spot) + (1 | Xhr.dectime) + (1 | Rdate)
+        Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+reduced 14 3843.4 3940.7 -1907.7   3815.4                           
+full    15 3840.9 3945.1 -1905.5   3810.9 4.5125      1    0.03365 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] Estimate: -0.283960504321496
