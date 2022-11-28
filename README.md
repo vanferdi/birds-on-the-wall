@@ -12,7 +12,7 @@ Ferdinand, Pattenden, Brightsmith, &amp; Hobson (2022)
 
 `solo_presence.R` calculates column 5 of Figure 3.
 
-`[Liz please upload]` contains everything else in Figure 3.
+` ` contains everything else in Figure 3.
 
 ## Copresence patterns
 
