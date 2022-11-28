@@ -35,7 +35,7 @@ Ferdinand, Pattenden, Brightsmith, &amp; Hobson (2022)
 
 ## Supplemental: Overview of clay lick use
 
-Figure S1 is created in ` `.
+Figure S1 is created in  ` `.
 
 Figure S2 is created in ` `.
 
